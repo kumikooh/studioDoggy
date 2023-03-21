@@ -1,7 +1,50 @@
+// /*========= LoadingのためのCSS ===============*/
+
+// /* Loading背景画面設定　*/
+#splash {
+  // /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #c2d5dd;
+  text-align: center;
+  color: #fff;
+}
+
+// Loading画像中央配置
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Loading アイコンの大きさ設定
+#splash_logo svg {
+  width: 300px;
+}
+
+// =============== SVGアニメーション内の指定 =================
+
+#mask path {
+  fill-opacity: 0;
+  transition: fill-opacity 0.5s;
+  fill: none;
+  stroke: #3e3e3e;
+}
+
+#mask.done path {
+  fill: #3e3e3e;
+  fill-opacity: 1;
+  stroke: none;
+}
+
 html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -9,9 +52,29 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #c2d5dd;
+  background-image: url(../image/hero--750.jpg);
+  background-size: cover;
 
-  .greeting {
-    font-size: x-large;
-    font-weight: 800;
+  @media (min-width: 750px) {
+    background-image: url(../image/hero@2x.jpg);
+    background-size: cover;
+  }
+}
+
+.greeting {
+  font-size: x-large;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0;
+  @media (min-width: 750px) {
+    font-size: xx-large;
+  }
+
+  .text-inline-blok {
+    display: block;
+
+    @media (min-width: 750px) {
+      display: inline;
+    }
   }
 }
