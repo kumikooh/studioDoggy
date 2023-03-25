@@ -1,9 +1,9 @@
 .p-openbtn {
   position: relative; /*ボタン内側の基点となるためrelativeを指定*/
-  width: 50px;
-  height: 50px;
+  width: 68px;
+  height: 68px;
   cursor: pointer;
-  background: transparent;
+  // background: aqua;
 }
 
 /*ボタン内側*/
@@ -12,33 +12,33 @@
   display: inline-block;
   transition: all 0.4s; /*アニメーションの設定*/
   position: absolute;
-  left: 13px;
+  left: 16px;
   height: 2px;
   background-color: #3e3e3e;
 }
 
 .p-openbtn span:nth-of-type(1) {
-  top: 22px;
+  top: 28px;
   width: 50%;
 }
 
 .p-openbtn span:nth-of-type(2) {
-  top: 29px;
-  width: 30%;
+  top: 36px;
+  width: 32%;
 }
 
 //activeクラスが付与されると線が回転して×に
 
 .p-openbtn.active span:nth-of-type(1) {
-  top: 20px;
-  left: 16px;
+  top: 24px;
+  left: 18px;
   transform: translateY(6px) rotate(-45deg);
-  width: 35%;
+  width: 48%;
 }
 
 .p-openbtn.active span:nth-of-type(2) {
-  top: 32px;
-  left: 16px;
+  top: 36px;
+  left: 18px;
   transform: translateY(-6px) rotate(45deg);
-  width: 35%;
+  width: 48%;
 }

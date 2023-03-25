@@ -15,6 +15,7 @@
   * object
   */
 // Component
+@use "object/component/_inner";
 // @use "object/component/_button";
 // @use "object/component/_grid";
 // @use "object/component/_media";
@@ -22,6 +23,6 @@
 
 // Project
 // @use "object/project/_section";
-@use "object/project/hamburger";
+@use "object/project/_hamburger";
 
 // Utility
