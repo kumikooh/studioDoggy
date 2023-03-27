@@ -1,3 +1,20 @@
+// color
+// ──────────────────────────────
+
+$color-base: #fff;
+$color-main: #81a8b8;
+$color-main-100: #c2d5dd;
+// $color-main-200: #a0daa8;
+$color-main-300: #4c8aa4;
+$color-accent: #f4bf4b;
+$color-header-text: #4c8aa4;
+
+$color-gray-100: #e9e9e9;
+$color-gray-200: #d0d0d0;
+$color-gray-500: #3e3e3e;
+$color-text: #3e3e3e;
+$color-black: #333;
+
 // breakpoint
 // ──────────────────────────────
 @mixin breakpoint($point) {
