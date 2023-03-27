@@ -15,5 +15,20 @@
   &__logo {
     display: inline-block;
     max-width: 40%;
+
+    .c-logo-paw-lg {
+      display: none;
+    }
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      .c-logo-paw-lg {
+        display: block;
+      }
+      .c-logo-paw {
+        display: none;
+      }
+    }
   }
 }

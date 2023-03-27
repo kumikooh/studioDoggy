@@ -1,28 +1,21 @@
 /*
  * foundation
  */
-// @use "foundation/_reset";
-@use "foundation/_base";
+@use "foundation/base";
+@use "foundation/variable";
 
 /*
   * layout
   */
-// @use "layout/_footer";
-@use "layout/_header";
-// @use "layout/_main";
+@use "layout/header";
 
 /*
   * object
   */
 // Component
-@use "object/component/_inner";
-// @use "object/component/_button";
-// @use "object/component/_grid";
-// @use "object/component/_media";
-// @use "object/component/_title";
+@use "object/component/inner";
 
 // Project
-// @use "object/project/_section";
 @use "object/project/_hamburger";
 
 // Utility
