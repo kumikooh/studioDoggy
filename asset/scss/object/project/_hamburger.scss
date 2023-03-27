@@ -1,9 +1,9 @@
 .p-openbtn {
   position: relative; /*ボタン内側の基点となるためrelativeを指定*/
-  width: 64px;
+  width: 52px;
   height: 64px;
   cursor: pointer;
-  background: aqua;
+  // background: aqua;
 }
 
 /*ボタン内側*/
@@ -19,12 +19,12 @@
 
 .p-openbtn span:nth-of-type(1) {
   top: 28px;
-  width: 50%;
+  width: 60%;
 }
 
 .p-openbtn span:nth-of-type(2) {
   top: 36px;
-  width: 32%;
+  width: 40%;
 }
 
 //activeクラスが付与されると線が回転して×に
