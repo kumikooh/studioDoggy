@@ -1,8 +1,9 @@
 @use "./../foundation/variable" as *;
 
 .l-header {
-  position: sticky;
+  position: absolute;
   top: 0;
+  width: 100%;
   background-color: transparent;
   z-index: 1;
 
