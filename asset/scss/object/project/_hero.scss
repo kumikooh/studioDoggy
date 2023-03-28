@@ -1,0 +1,26 @@
+@use "../../foundation/variable" as *;
+
+/* hero
+--------------------------- */
+.p-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.p-hero-image {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-main;
+  background-image: url(../image/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(tablet) {
+    background-image: url(../image/hero-md.jpg);
+  }
+  @include breakpoint(pc) {
+    background-image: url(../image/hero-lg.jpg);
+  }
+}

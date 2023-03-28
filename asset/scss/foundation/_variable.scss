@@ -19,12 +19,12 @@ $color-black: #333;
 // ──────────────────────────────
 @mixin breakpoint($point) {
   @if $point == tablet {
-    @media (min-width: 640px) {
+    @media (min-width: 520px) {
       @content;
     }
   }
   @if $point == pc {
-    @media (min-width: 750px) {
+    @media (min-width: 950px) {
       @content;
     }
   }
