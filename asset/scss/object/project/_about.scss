@@ -1,0 +1,69 @@
+@use "../../foundation/variable" as *;
+
+/* about
+--------------------------- */
+
+.p-about {
+  height: auto;
+  width: auto;
+  background-image: url(../image/polaroid.webp);
+  background-repeat: repeat;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      // width: 100%;
+    }
+    @include breakpoint(pc) {
+      display: block;
+      // padding-left: 8rem;
+    }
+
+    .logo-text {
+      @include breakpoint(tablet) {
+      }
+      @include breakpoint(pc) {
+        display: none;
+      }
+    }
+
+    .logo-text-lg {
+      display: none;
+      @include breakpoint(tablet) {
+      }
+      @include breakpoint(pc) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: row;
+      padding-left: 4rem;
+    }
+    @include breakpoint(pc) {
+      padding-left: 8rem;
+    }
+  }
+
+  &__content-main {
+    width: 100%;
+  }
+
+  &__content-description {
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 6rem 0 2rem;
+    }
+    @include breakpoint(pc) {
+      padding-left: 6.4rem;
+      margin-bottom: 8rem;
+    }
+  }
+}

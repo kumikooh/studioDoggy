@@ -3,24 +3,44 @@
 /* hero
 --------------------------- */
 .p-hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.p-hero-image {
-  width: 100vw;
+  // position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
   height: 100vh;
   background-color: $color-main;
-  background-image: url(../image/hero.jpg);
-  background-repeat: no-repeat;
+  background: url(../image/hero-img.jpg) no-repeat top center;
   background-size: cover;
+  transform-origin: center;
 
-  @include breakpoint(tablet) {
-    background-image: url(../image/hero-md.jpg);
-  }
-  @include breakpoint(pc) {
-    background-image: url(../image/hero-lg.jpg);
-  }
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
 }
+
+// .p-hero-image {
+// position: fixed;
+// z-index: 1;
+// top: 0;
+// width: 100%;
+// height: 100vh;
+// background-color: $color-main;
+// background: url(../image/hero-img.jpg) no-repeat top center;
+// background-size: cover;
+// transform-origin: center;
+
+// width: 100vw;
+// height: 100vh;
+// background-color: $color-main;
+// background-image: url(../image/hero-img.jpg);
+// background-repeat: no-repeat;
+// background-size: cover;
+
+// @include breakpoint(tablet) {
+//   background-image: url(../image/hero-md.jpg);
+// }
+// @include breakpoint(pc) {
+//   background-image: url(../image/hero-lg.jpg);
+// }
+// }

@@ -1,0 +1,22 @@
+.l-container {
+
+  position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
+	z-index: 5;/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
+    background:#f8f9fa;
+
+  padding:600px 0;
+  text-align: center;
+}
+
+
+  // position: relative;
+  // z-index: 5;
+  // background: #eee;
+  // padding: 600px 0;
+  // text-align: center;
+}
+
+.l-footer{
+	position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
+	z-index: 5;/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
+    background:#f8f9fa;
