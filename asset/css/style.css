@@ -52,12 +52,14 @@ a:hover img {
   transition: all 0.3s;
 }
 
+/* header
+--------------------------- */
 .l-header {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: transparent;
-  z-index: 1;
+  z-index: 10;
 }
 .l-header__content {
   display: -webkit-box;
@@ -89,9 +91,181 @@ a:hover img {
 /* inner
 --------------------------- */
 .c-inner {
-  max-width: 1220px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* section
+--------------------------- */
+.c-section {
+  padding: 3.2rem 0 6.4rem 0;
+}
+@media (min-width: 520px) {
+  .c-section {
+    padding-top: 8rem;
+  }
+}
+.c-section__header-box {
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 520px) {
+  .c-section__header-box {
+    margin-bottom: 8rem;
+  }
+}
+.c-section__header {
+  color: #3e3e3e;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+@media (min-width: 520px) {
+  .c-section__header {
+    font-size: 2.4rem;
+  }
+}
+.c-section__header--sub {
+  color: #3e3e3e;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-left: 0.8rem;
+}
+@media (min-width: 520px) {
+  .c-section__header--sub {
+    font-size: 1.6rem;
+  }
+}
+.c-section__catch {
+  color: #4c8aa4;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 520px) {
+  .c-section__catch {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+}
+.c-section__text {
+  font-size: 1.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+@media (min-width: 520px) {
+  .c-section__text {
+    padding-top: 2rem;
+    margin-bottom: 8rem;
+    font-size: 1.8rem;
+  }
+}
+/* scrolldown
+--------------------------- */
+/*========= スクロールダウンのためのCSS ===============*/
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+/*スクロールダウン全体の場所*/
+.c-scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 2;
+}
+
+/*Scrollテキストの描写*/
+.c-scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #3e3e3e;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.c-scrolldown:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3e3e3e;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+/*上から下にかけて丸が透過→不透明→透過する*/
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 線の描写 */
+.c-scrolldown:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: #3e3e3e;
 }
 
 /* hamburger
@@ -143,36 +317,89 @@ a:hover img {
 /* hero
 --------------------------- */
 .p-hero {
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #81a8b8;
+  background: url(../image/hero-img.jpg) no-repeat top center;
+  background-size: cover;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+/* about
+--------------------------- */
+.p-about {
+  height: auto;
+  width: auto;
+  background-image: url(../image/polaroid.webp);
+  background-repeat: repeat;
+}
+.p-about__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-.p-hero-image {
-  width: 100vw;
-  height: 100vh;
-  background-color: #81a8b8;
-  background-image: url(../image/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media (min-width: 520px) {
-  .p-hero-image {
-    background-image: url(../image/hero-md.jpg);
+@media (min-width: 950px) {
+  .p-about__logo {
+    display: block;
   }
 }
 @media (min-width: 950px) {
-  .p-hero-image {
-    background-image: url(../image/hero-lg.jpg);
+  .p-about__logo .logo-text {
+    display: none;
+  }
+}
+.p-about__logo .logo-text-lg {
+  display: none;
+}
+@media (min-width: 950px) {
+  .p-about__logo .logo-text-lg {
+    display: block;
+  }
+}
+@media (min-width: 520px) {
+  .p-about__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 950px) {
+  .p-about__content {
+    padding-left: 8rem;
+  }
+}
+.p-about__content-main {
+  width: 100%;
+}
+@media (min-width: 520px) {
+  .p-about__content-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 6rem 0 2rem;
+  }
+}
+@media (min-width: 950px) {
+  .p-about__content-description {
+    padding-left: 6.4rem;
+    margin-bottom: 8rem;
   }
 }

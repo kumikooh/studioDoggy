@@ -1,0 +1,83 @@
+@use "../../foundation/variable" as *;
+
+/* section
+--------------------------- */
+.c-section {
+  padding: 3.2rem 0 6.4rem 0;
+
+  @include breakpoint(tablet) {
+    padding-top: 8rem;
+  }
+  // @include breakpoint(pc) {
+  // }
+
+  &__header-box {
+    margin-bottom: 3.2rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 8rem;
+    }
+    // @include breakpoint(pc) {
+    //   margin-bottom: 8rem;
+    // }
+  }
+
+  &__header {
+    color: $color-gray-500;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+
+    @include breakpoint(tablet) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(pc) {
+    }
+  }
+
+  &__header--sub {
+    color: $color-gray-500;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-left: 0.8rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint(pc) {
+    }
+  }
+
+  &__catch {
+    color: $color-main-300;
+    font-family: sans-serif;
+    font-weight: 600;
+    // font-size: 2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      font-size: 2rem;
+    }
+
+    @include breakpoint(pc) {
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 2rem;
+      margin-bottom: 8rem;
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(pc) {
+    }
+  }
+}
