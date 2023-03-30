@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  color: #333333;
+  color: #3e3e3e;
   font-size: 1.6rem;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   min-width: 350px;
@@ -412,10 +412,28 @@ a:hover img {
 .p-plan {
   background: url(../image/halftone.png);
 }
+.p-plan__content-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2.4rem;
+}
 .p-plan__content-card {
+  width: 98%;
   padding-top: 3.2rem;
+  margin: 0 auto;
   background-color: #fff9eb;
   margin-bottom: 4.8rem;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 520px) {
+  .p-plan__content-card {
+    width: 84%;
+  }
 }
 .p-plan__content-header {
   text-align: center;
@@ -438,14 +456,20 @@ a:hover img {
   margin-bottom: 1.6rem;
 }
 .p-plan__price-dt {
-  padding-left: 3.2rem;
+  padding-left: 10%;
   width: 40%;
+}
+.p-plan__price-dt--stamp {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 0 8%;
 }
 .p-plan__price-dd {
   width: 60%;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.8rem;
+  padding-left: 8%;
 }
 .p-plan__price-dd::before {
   content: "¥";
@@ -454,10 +478,24 @@ a:hover img {
   content: "（税込み）";
   font-size: 1.2rem;
 }
+.p-plan__price-dd--quantity {
+  width: 40%;
+  text-align: right;
+  font-weight: 600;
+}
+.p-plan__price-dd--quantity::after {
+  content: "枚";
+  font-size: 1.4rem;
+  font-weight: 400;
+}
 .p-plan__price-description {
   padding-bottom: 4.8rem;
   text-align: center;
   font-weight: 600;
+}
+.p-plan__price-description span {
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 .p-plan__button-area {
   display: -webkit-box;
@@ -471,7 +509,7 @@ a:hover img {
       -ms-flex-align: center;
           align-items: center;
 }
-.p-plan__button-yoyaku {
+.p-plan__button-reserve {
   border: #3e3e3e 1px solid;
   padding: 1.6rem 5.6rem;
   margin-bottom: 4.8rem;
@@ -483,4 +521,14 @@ a:hover img {
 }
 .p-plan__content--location {
   background: url(../image/seamless_paper_texture.webp);
+  padding-top: 6.4rem;
+}
+.p-plan__content--stamp {
+  padding-top: 6.4rem;
+}
+
+/* utility
+--------------------------- */
+.u-pb32 {
+  padding-bottom: 3.2rem;
 }
