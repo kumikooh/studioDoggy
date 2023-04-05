@@ -1,0 +1,50 @@
+@use "../../foundation/variable" as *;
+
+/* utility
+--------------------------- */
+
+// padding ____
+
+.u-pb32 {
+  padding-bottom: 3.2rem;
+}
+
+.u-pb32--card {
+  padding-bottom: 3.2rem;
+  display: none;
+
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(pc) {
+    display: block;
+  }
+}
+
+.u-pb48 {
+  padding-bottom: 4.8rem;
+}
+
+.u-pb62 {
+  padding-bottom: 6.2rem;
+}
+
+.u-pb80--plan {
+  padding-bottom: 8rem;
+  display: none;
+
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(pc) {
+    display: block;
+  }
+}
+
+// margin ____
+
+.u-mb0 {
+  margin-bottom: 0;
+}
+
+.u-mb62 {
+  margin-bottom: 6.2rem;
+}

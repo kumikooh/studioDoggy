@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  color: #333333;
+  color: #3e3e3e;
   font-size: 1.6rem;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   min-width: 350px;
@@ -79,7 +79,7 @@ a:hover img {
 .l-header__logo .c-logo-paw-lg {
   display: none;
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .l-header__logo .c-logo-paw-lg {
     display: block;
   }
@@ -99,11 +99,11 @@ a:hover img {
 /* section
 --------------------------- */
 .c-section {
-  padding: 3.2rem 0 6.4rem 0;
+  padding-top: 3.2rem;
 }
 @media (min-width: 520px) {
   .c-section {
-    padding-top: 8rem;
+    padding-top: 6.4rem;
   }
 }
 .c-section__header-box {
@@ -111,12 +111,14 @@ a:hover img {
 }
 @media (min-width: 520px) {
   .c-section__header-box {
-    margin-bottom: 8rem;
+    margin-bottom: 6.4rem;
   }
+}
+.c-section__header-box--plan {
+  margin-bottom: 6.4rem;
 }
 .c-section__header {
   color: #3e3e3e;
-  font-family: sans-serif;
   font-weight: 600;
   font-size: 2rem;
 }
@@ -127,7 +129,6 @@ a:hover img {
 }
 .c-section__header--sub {
   color: #3e3e3e;
-  font-family: sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
   padding-left: 0.8rem;
@@ -139,7 +140,6 @@ a:hover img {
 }
 .c-section__catch {
   color: #4c8aa4;
-  font-family: sans-serif;
   font-weight: 600;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -155,11 +155,12 @@ a:hover img {
   font-size: 1.5rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+  padding-bottom: 6.4rem;
 }
 @media (min-width: 520px) {
   .c-section__text {
     padding-top: 2rem;
-    margin-bottom: 8rem;
+    margin-bottom: 2.6rem;
     font-size: 1.8rem;
   }
 }
@@ -347,12 +348,12 @@ a:hover img {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .p-about__logo {
     display: block;
   }
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .p-about__logo .logo-text {
     display: none;
   }
@@ -360,7 +361,7 @@ a:hover img {
 .p-about__logo .logo-text-lg {
   display: none;
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .p-about__logo .logo-text-lg {
     display: block;
   }
@@ -377,7 +378,7 @@ a:hover img {
     padding-left: 4rem;
   }
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .p-about__content {
     padding-left: 8rem;
   }
@@ -397,9 +398,218 @@ a:hover img {
     padding: 0 6rem 0 2rem;
   }
 }
-@media (min-width: 950px) {
+@media (min-width: 960px) {
   .p-about__content-description {
     padding-left: 6.4rem;
-    margin-bottom: 8rem;
   }
+}
+
+/* plan
+--------------------------- */
+.p-plan {
+  background: url(../image/halftone.png);
+}
+@media (min-width: 960px) {
+  .p-plan__content-studio {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+.p-plan__content-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 960px) {
+  .p-plan__content-image {
+    display: block;
+  }
+}
+@media (min-width: 520px) {
+  .p-plan__content-img {
+    display: none;
+  }
+}
+.p-plan__content-img-lg {
+  display: none;
+}
+@media (min-width: 520px) {
+  .p-plan__content-img-lg {
+    display: block;
+    width: 75%;
+    margin: auto;
+  }
+}
+@media (min-width: 960px) {
+  .p-plan__content-img-lg {
+    margin: 0;
+  }
+}
+.p-plan__content-card {
+  width: 98%;
+  padding-top: 3.2rem;
+  margin: 0 auto;
+  background-color: #fff9eb;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 520px) {
+  .p-plan__content-card {
+    width: 75%;
+  }
+}
+.p-plan__content-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+.p-plan__content-description {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 3.2rem;
+}
+.p-plan__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+.p-plan__price-dt {
+  padding-left: 10%;
+  width: 40%;
+}
+.p-plan__price-dt--stamp {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  width: 100%;
+  padding: 0 9%;
+}
+.p-plan__price-dd {
+  width: 60%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-left: 8%;
+}
+.p-plan__price-dd::before {
+  content: "¥";
+}
+.p-plan__price-dd::after {
+  content: "（税込み）";
+  font-size: 1.2rem;
+}
+.p-plan__price-dd--quantity {
+  width: 40%;
+  text-align: right;
+  font-weight: 600;
+}
+.p-plan__price-dd--quantity::after {
+  content: "枚";
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.p-plan__price-description {
+  padding-bottom: 4.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+.p-plan__price-description span {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.p-plan__button-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4.8rem;
+}
+@media (min-width: 960px) {
+  .p-plan__button-area {
+    display: none;
+  }
+}
+.p-plan__button-reserve {
+  border: #3e3e3e 1px solid;
+  padding: 1.6rem 5.6rem;
+  margin-bottom: 4.8rem;
+}
+.p-plan__button-reserve--pc {
+  border: #3e3e3e 1px solid;
+  padding: 1.6rem 5.6rem;
+  display: none;
+}
+@media (min-width: 960px) {
+  .p-plan__button-reserve--pc {
+    display: block;
+  }
+}
+.p-plan__button-line {
+  border: #3e3e3e 1px solid;
+  padding: 1.6rem 1.4rem;
+}
+.p-plan__content--location {
+  background: url(../image/seamless_paper_texture.webp);
+  padding-top: 6.4rem;
+}
+.p-plan__content--stamp {
+  padding-top: 6.4rem;
+}
+
+/* utility
+--------------------------- */
+.u-pb32 {
+  padding-bottom: 3.2rem;
+}
+
+.u-pb32--card {
+  padding-bottom: 3.2rem;
+  display: none;
+}
+@media (min-width: 960px) {
+  .u-pb32--card {
+    display: block;
+  }
+}
+
+.u-pb48 {
+  padding-bottom: 4.8rem;
+}
+
+.u-pb62 {
+  padding-bottom: 6.2rem;
+}
+
+.u-pb80--plan {
+  padding-bottom: 8rem;
+  display: none;
+}
+@media (min-width: 960px) {
+  .u-pb80--plan {
+    display: block;
+  }
+}
+
+.u-mb0 {
+  margin-bottom: 0;
+}
+
+.u-mb62 {
+  margin-bottom: 6.2rem;
 }

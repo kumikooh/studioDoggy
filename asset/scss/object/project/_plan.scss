@@ -1,0 +1,183 @@
+@use "../../foundation/variable" as *;
+
+/* plan
+--------------------------- */
+.p-plan {
+  background: url(../image/halftone.png);
+
+  &__content-studio {
+    @include breakpoint(pc) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__content-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      display: block;
+    }
+  }
+
+  &__content-img {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    @include breakpoint(pc) {
+    }
+  }
+
+  &__content-img-lg {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+      width: 75%;
+      margin: auto;
+    }
+    @include breakpoint(pc) {
+      margin: 0;
+    }
+  }
+
+  &__content-card {
+    width: 98%;
+    padding-top: 3.2rem;
+    margin: 0 auto;
+    background-color: #fff9eb;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    @include breakpoint(tablet) {
+      width: 75%;
+    }
+    @include breakpoint(pc) {
+      // max-width: 592px;
+    }
+  }
+
+  &__content-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+  }
+
+  &__content-description {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  &__price-dt {
+    padding-left: 10%;
+    width: 40%;
+  }
+
+  &__price-dt--stamp {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    width: 100%;
+    padding: 0 9%;
+  }
+
+  &__price-dd {
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    padding-left: 8%;
+
+    &::before {
+      content: "¥";
+    }
+
+    &::after {
+      content: "（税込み）";
+      font-size: 1.2rem;
+    }
+  }
+
+  &__price-dd--quantity {
+    width: 40%;
+    text-align: right;
+    font-weight: 600;
+
+    &::after {
+      content: "枚";
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+
+  &__price-description {
+    padding-bottom: 4.8rem;
+    text-align: center;
+    font-weight: 600;
+
+    span {
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4.8rem;
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+
+  &__button-reserve {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 5.6rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__button-reserve--pc {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 5.6rem;
+    // margin-bottom: 4.8rem;
+    display: none;
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      display: block;
+    }
+  }
+
+  &__button-line {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 1.4rem;
+  }
+
+  &__content--location {
+    background: url(../image/seamless_paper_texture.webp);
+    padding-top: 6.4rem;
+  }
+
+  &__content--stamp {
+    padding-top: 6.4rem;
+  }
+}
