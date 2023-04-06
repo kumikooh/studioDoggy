@@ -39,12 +39,16 @@
     border-radius: 8px;
   }
   &__card--back {
-    color: $color-gray-500;
+    color: $color-gray-100;
     // background-image: url(../image/connect.webp);
     background-color: $color-main-300;
     // background-color: rgba(0, 0, 255, 0.219);
     transform: rotateY(-180deg);
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
   }
   &__card--image {
     border-radius: 8px;
