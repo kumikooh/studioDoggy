@@ -1,0 +1,87 @@
+@use "../../foundation/variable" as *;
+
+/* voice
+--------------------------- */
+
+.p-voice {
+  // background: url(../image/polaroid.webp);
+  background-image: url(../image/connect.webp);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 16px;
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+  }
+  &__card::before {
+    content: "";
+    display: block;
+    padding-top: 66.66%; /* 3:2 */
+  }
+  &__card--front,
+  &__card--back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 4px;
+  }
+  &__card--front {
+    color: $color-gray-500;
+    border-radius: 4px;
+  }
+  &__card--back {
+    color: $color-gray-100;
+    // background-image: url(../image/connect.webp);
+    background-color: $color-main-300;
+    transform: rotateY(-180deg);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+  }
+
+  &__card--image {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon--instagram {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8%;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.flipped {
+  .p-voice__card--front {
+    transform: rotateY(180deg);
+  }
+  .p-voice__card--back {
+    transform: rotateY(0);
+  }
+}
