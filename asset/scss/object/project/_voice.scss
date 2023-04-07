@@ -9,7 +9,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 16px;
   }
 
@@ -47,7 +47,6 @@
     color: $color-gray-100;
     // background-image: url(../image/connect.webp);
     background-color: $color-main-300;
-    // background-color: rgba(0, 0, 255, 0.219);
     transform: rotateY(-180deg);
     border-radius: 4px;
     display: flex;
@@ -55,6 +54,7 @@
     align-items: center;
     padding: 0 4rem;
   }
+
   &__card--image {
     border-radius: 4px;
     object-fit: cover;
@@ -62,10 +62,16 @@
     height: 100%;
   }
 
+  &__icon--instagram {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8%;
+  }
+
   &__description {
     display: flex;
     justify-content: space-between;
-    // justify-content: flex-start;
     align-items: center;
     margin-bottom: 2.4rem;
   }
