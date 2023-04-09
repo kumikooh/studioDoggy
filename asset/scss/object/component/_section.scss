@@ -12,6 +12,9 @@
   // }
 
   &__header-box {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     margin-bottom: 3.2rem;
     @include breakpoint(tablet) {
       margin-bottom: 6.4rem;
@@ -21,6 +24,9 @@
   }
 
   &__header-box--plan {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     margin-bottom: 6.4rem;
   }
 
