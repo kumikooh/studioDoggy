@@ -46,9 +46,13 @@
     <!-- サイトのアイコン -->
     <link rel="icon" type="image/x-icon" href="./asset/image/favicon.ico" />
     <!-- fontawesome -->
-    <link
+    <!-- <link
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- reset.css destyle -->
     <link
@@ -708,7 +712,56 @@
 
       <!-- .p-access -->
       <section class="p-access c-section">
-        <div class="c-inner"></div>
+        <div class="c-inner">
+          <h2 class="c-section__header-box">
+            <span class="c-section__header">Access /</span
+            ><span class="c-section__header--sub">店舗情報</span>
+          </h2>
+          <div class="p-access__map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.116822457989!2d138.92935822804685!3d35.30307861722305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019765b3979d569%3A0x79a3962136cb21e2!2z44CSNDEyLTAwNDIg6Z2Z5bKh55yM5b6h5q6_5aC05biC6JCp5Y6f77yX77yS77yZ4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1681178115490!5m2!1sja!2sjp"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="p-access__map"
+            ></iframe>
+          </div>
+          <!-- /.p-access__map -->
+          <div class="p-access__info-box">
+            <div class="p-access__logo">
+              <img src="./asset/image/logo-text--outline-gray200.svg" alt="" />
+            </div>
+            <div class="p-access__shop-info">
+              <h3 class="p-access__shop-name">スタジオドギー</h3>
+              <dl>
+                <dt>
+                  <!-- <i class="fa-solid fa-shop"></i> -->
+                  住所
+                </dt>
+                <dd><span>〒412-0042 </span>静岡県御殿場市萩原729-11</dd>
+                <dt>
+                  <!-- <i class="fa-solid fa-calendar-days"></i>  -->
+                  営業日
+                </dt>
+                <dd>金・土・日・月</dd>
+                <dt>
+                  <!-- <i class="fa-solid fa-phone"></i> -->
+                  電話
+                </dt>
+                <dd>1234-56-7890</dt>
+              </dl>
+            </div>
+          </div>
+          <!-- /.p-access__info-box -->
+          <div class="p-access__notes">
+            <p>スタジオまではGoogleマップを利用してお越しください。</p>
+          </div>
+          <!-- ./c-access__notes -->
+        </div>
+        <!-- ./c-inner" -->
       </section>
       <!-- /.p-access -->
     </main>
@@ -716,7 +769,8 @@
 
     <!-- .l-footer -->
     <footer class="l-footer">
-      <div class="c-inner"></div>
+      <div class="c-inner">
+      </div>
     </footer>
     <!-- /.l-footer -->
 
