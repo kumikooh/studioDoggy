@@ -3,6 +3,7 @@
 
 @use "layout/header";
 // @use "layout/container";
+@use "layout/footer";
 
 // Component
 @use "object/component/inner";
@@ -17,6 +18,7 @@
 @use "object/project/plan";
 @use "object/project/voice";
 @use "object/project/faq";
+@use "object/project/access";
 @use "object/project/gallery";
 
 // Utility
