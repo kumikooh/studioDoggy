@@ -158,6 +158,11 @@ a:hover img {
     font-size: 2.4rem;
   }
 }
+@media (min-width: 960px) {
+  .c-section__header {
+    font-size: 4rem;
+  }
+}
 .c-section__header--sub {
   color: #3e3e3e;
   font-weight: 400;
@@ -167,6 +172,11 @@ a:hover img {
 @media (min-width: 520px) {
   .c-section__header--sub {
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 960px) {
+  .c-section__header--sub {
+    font-size: 2rem;
   }
 }
 .c-section__catch {
