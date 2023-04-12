@@ -88,6 +88,18 @@ a:hover img {
   }
 }
 
+/* footer
+--------------------------- */
+.l-footer {
+  background-color: #3e3e3e;
+  color: #d0d0d0;
+  padding: 0.8rem 0;
+}
+.l-footer__copyright {
+  display: block;
+  text-align: center;
+}
+
 /* inner
 --------------------------- */
 .c-inner {
@@ -107,6 +119,15 @@ a:hover img {
   }
 }
 .c-section__header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 3.2rem;
 }
 @media (min-width: 520px) {
@@ -115,12 +136,22 @@ a:hover img {
   }
 }
 .c-section__header-box--plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 6.4rem;
 }
 .c-section__header {
   color: #3e3e3e;
   font-weight: 600;
   font-size: 2rem;
+  letter-spacing: 0.4rem;
 }
 @media (min-width: 520px) {
   .c-section__header {
@@ -269,6 +300,117 @@ a:hover img {
   background: #3e3e3e;
 }
 
+/* accordion
+--------------------------- */
+/*アコーディオン全体*/
+.c-accordion {
+  list-style: none;
+  width: 98%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 520px) {
+  .c-accordion {
+    width: 96%;
+  }
+}
+@media (min-width: 960px) {
+  .c-accordion {
+    width: 94%;
+  }
+}
+
+.c-accordion__list {
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.c-accordion__section {
+  border: 1px solid #fff;
+}
+
+/*アコーディオンタイトル*/
+.c-accordion__title {
+  position: relative; /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (min-width: 520px) {
+  .c-accordion__title {
+    font-size: 1.6rem;
+  }
+}
+/*アイコンの＋と×*/
+.c-accordion__title::before,
+.c-accordion__title::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+}
+
+.c-accordion__title::before {
+  top: 48%;
+  left: 15px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.c-accordion__title::after {
+  top: 48%;
+  left: 15px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.c-accordion__title.close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-accordion__title.close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.c-accordion__box {
+  display: none; /*はじめは非表示*/
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 6%;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+.c-accordion__title.close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-accordion__title.close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.c-accordion__box {
+  display: none; /*はじめは非表示*/
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 6%;
+  font-size: 1.4rem;
+}
+@media (min-width: 520px) {
+  .c-accordion__box {
+    font-size: 1.5rem;
+  }
+}
 /* hamburger
 --------------------------- */
 .p-openbtn {
@@ -572,6 +714,229 @@ a:hover img {
   padding-top: 6.4rem;
 }
 
+/* voice
+--------------------------- */
+.p-voice {
+  background-image: url(../image/connect.webp);
+}
+.p-voice__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 16px;
+}
+.p-voice__card {
+  position: relative;
+  width: 100%;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+.p-voice__card::before {
+  content: "";
+  display: block;
+  padding-top: 66.66%; /* 3:2 */
+}
+.p-voice__card--front, .p-voice__card--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 4px;
+}
+.p-voice__card--front {
+  color: #3e3e3e;
+  border-radius: 4px;
+}
+.p-voice__card--back {
+  color: #e9e9e9;
+  background-color: #4c8aa4;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4rem;
+}
+.p-voice__card--image {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.p-voice__icon--instagram {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8%;
+}
+.p-voice__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.flipped .p-voice__card--front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flipped .p-voice__card--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+/* faq
+--------------------------- */
+.p-faq {
+  background-image: url(../image/seamless_paper_texture.webp);
+}
+
+/* access
+--------------------------- */
+.p-access {
+  background-color: #d0d0d0;
+}
+.p-access__map-box {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+  margin-bottom: 3.2rem;
+}
+.p-access__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 520px) {
+  .p-access__info-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.p-access__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 0.8rem;
+}
+@media (min-width: 520px) {
+  .p-access__logo {
+    width: 48%;
+    padding-left: 24%;
+  }
+}
+.p-access__shop-info {
+  padding: 0 0.8rem 1.6rem 1.6rem;
+  font-size: 1.4rem;
+}
+@media (min-width: 520px) {
+  .p-access__shop-info {
+    width: 60%;
+    font-size: 1.6rem;
+  }
+}
+.p-access__shop-info h3 {
+  text-align: center;
+  padding-bottom: 0.8rem;
+  font-weight: 600;
+}
+@media (min-width: 520px) {
+  .p-access__shop-info h3 {
+    text-align: left;
+  }
+}
+.p-access__shop-info dt {
+  float: left;
+  font-weight: 400;
+}
+.p-access__shop-info dt::after {
+  content: ":";
+  padding: 0 0.5rem;
+}
+.p-access__shop-info dd span {
+  font-size: 1.2rem;
+}
+@media (min-width: 520px) {
+  .p-access__shop-info dd span {
+    font-size: 1.4rem;
+  }
+}
+.p-access__notes {
+  font-size: 1.4rem;
+  padding-bottom: 2.4rem;
+}
+@media (min-width: 520px) {
+  .p-access__notes {
+    text-align: center;
+  }
+}
+/* gallery
+--------------------------- */
+.p-gallery__items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  justify-items: center;
+  grid-gap: 16px;
+}
+.p-gallery__item img {
+  max-width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-gallery__follow-us {
+  padding-top: 4.8rem;
+  padding-bottom: 6.4rem;
+}
+.p-gallery__follow-us img {
+  display: block;
+  margin: auto;
+}
+.p-gallery__follow-us p {
+  text-align: center;
+  padding-top: 2.4rem;
+}
+
 /* utility
 --------------------------- */
 .u-pb32 {
@@ -608,6 +973,10 @@ a:hover img {
 
 .u-mb0 {
   margin-bottom: 0;
+}
+
+.u-mb8 {
+  margin-bottom: 0.8rem;
 }
 
 .u-mb62 {
