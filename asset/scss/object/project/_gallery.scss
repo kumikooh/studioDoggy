@@ -2,3 +2,36 @@
 
 /* gallery
 --------------------------- */
+.p-gallery {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-items: center;
+    grid-gap: 16px;
+  }
+  &__item {
+    img {
+      max-width: 160px;
+      height: 160px;
+      object-fit: cover;
+
+      @include breakpoint(tablet) {
+      }
+      @include breakpoint(pc) {
+      }
+    }
+  }
+
+  &__follow-us {
+    padding-top: 4.8rem;
+    padding-bottom: 6.4rem;
+    img {
+      display: block;
+      margin: auto;
+    }
+    p {
+      text-align: center;
+      padding-top: 2.4rem;
+    }
+  }
+}
