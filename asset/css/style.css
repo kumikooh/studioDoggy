@@ -561,27 +561,15 @@ a:hover img {
 .p-plan {
   background: url(../image/halftone.png);
 }
-@media (min-width: 960px) {
-  .p-plan__content-studio {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
+.p-plan__content--location {
+  background: url(../image/seamless_paper_texture.webp);
+  padding-top: 6.4rem;
+}
+.p-plan__content--stamp {
+  padding-top: 6.4rem;
 }
 .p-plan__content-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 2.4rem;
-}
-@media (min-width: 960px) {
-  .p-plan__content-image {
-    display: block;
-  }
 }
 @media (min-width: 520px) {
   .p-plan__content-img {
@@ -616,7 +604,23 @@ a:hover img {
     width: 75%;
   }
 }
-.p-plan__content-header {
+@media (min-width: 960px) {
+  .p-plan__content-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+.p-plan__content-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
@@ -679,6 +683,18 @@ a:hover img {
   font-weight: 500;
   font-size: 1.8rem;
 }
+.p-plan__content-card-button--lg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 .p-plan__button-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,13 +731,6 @@ a:hover img {
 .p-plan__button-line {
   border: #3e3e3e 1px solid;
   padding: 1.6rem 1.4rem;
-}
-.p-plan__content--location {
-  background: url(../image/seamless_paper_texture.webp);
-  padding-top: 6.4rem;
-}
-.p-plan__content--stamp {
-  padding-top: 6.4rem;
 }
 
 /* voice
@@ -783,6 +792,10 @@ a:hover img {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 4rem;
+}
+.p-voice__card--back a {
+  text-decoration: none;
+  color: #e9e9e9;
 }
 .p-voice__card--image {
   border-radius: 4px;

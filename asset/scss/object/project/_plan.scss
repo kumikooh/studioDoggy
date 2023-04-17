@@ -5,24 +5,48 @@
 .p-plan {
   background: url(../image/halftone.png);
 
-  &__content-studio {
+  &__content {
+    // @include breakpoint(pc) {
+    //   position: relative;
+    //   width: 960px;
+    //   height: auto;
+    //   margin: 0 auto;
+    // }
+  }
+
+  &__content--location {
+    background: url(../image/seamless_paper_texture.webp);
+    padding-top: 6.4rem;
+  }
+
+  &__content--stamp {
+    padding-top: 6.4rem;
+
     @include breakpoint(pc) {
-      position: relative;
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
+      // position: relative;
+      // width: 960px;
+      // height: auto;
+      // margin: 0 auto;
+    }
+  }
+
+  &__content-image-wrapper {
+    @include breakpoint(pc) {
+      // position: relative;
     }
   }
 
   &__content-image {
-    display: flex;
-    justify-content: center;
     margin-bottom: 2.4rem;
 
     @include breakpoint(tablet) {
     }
     @include breakpoint(pc) {
-      display: block;
+      // display: block;
+      // position: absolute;
+      // top: 50;
+      // left: 0;
+      // z-index: 5;
     }
   }
 
@@ -47,6 +71,12 @@
     }
   }
 
+  &__content-card-wrapper {
+    @include breakpoint(pc) {
+      // position: relative;
+    }
+  }
+
   &__content-card {
     width: 98%;
     padding-top: 3.2rem;
@@ -59,10 +89,23 @@
     }
     @include breakpoint(pc) {
       // max-width: 592px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      // display: block;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // position: absolute;
+      // top: 50%;
+      // right: 0;
+      // transform: translateY(-50%);
+      padding-left: 4%;
+      padding-right: 4%;
     }
   }
 
-  &__content-header {
+  &__content-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -135,6 +178,12 @@
     }
   }
 
+  &__content-card-button--lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   &__button-area {
     display: flex;
     flex-direction: column;
@@ -170,14 +219,5 @@
   &__button-line {
     border: $color-gray-500 1px solid;
     padding: 1.6rem 1.4rem;
-  }
-
-  &__content--location {
-    background: url(../image/seamless_paper_texture.webp);
-    padding-top: 6.4rem;
-  }
-
-  &__content--stamp {
-    padding-top: 6.4rem;
   }
 }

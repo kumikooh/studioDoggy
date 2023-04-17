@@ -137,40 +137,50 @@
             <span class="c-section__header">Plan /</span
             ><span class="c-section__header--sub">撮影プラン</span>
           </h2>
-
+        </div>
+        <div class="c-inner">
           <div class="p-plan__content">
             <!--  .p-plan__content-studio -->
-            <div class="p-plan__content-studio">
-              <div class="p-plan__content-image">
-                <img
-                  src="./asset/image/plan-studio.png"
-                  alt=""
-                  class="p-plan__content-img"
-                />
-                <img
-                  src="./asset/image/plan-studio-lg.png"
-                  alt=""
-                  class="p-plan__content-img-lg"
-                />
-                <!-- <span class="p-plan__content-image-accent">Studio</span> -->
+            <div class="p-plan__content--studio">
+              <div class="p-plan">
+                <div class="p-plan__content-image">
+                  <img
+                    src="./asset/image/plan-studio.png"
+                    alt=""
+                    class="p-plan__content-img"
+                  />
+                  <img
+                    src="./asset/image/plan-studio-lg.png"
+                    alt=""
+                    class="p-plan__content-img-lg"
+                  />
+                </div>
+                <!-- /.__content-image -->
               </div>
-              <!-- /.__content-image -->
-              <div class="p-plan__content-card">
-                <h2 class="p-plan__content-header">スタジオプラン</h2>
-                <p class="p-plan__content-description">
-                  自然光たっぷりのスタジオで<br />ペットと家族の撮影プラン
-                </p>
-                <dl class="p-plan__price">
-                  <dt class="p-plan__price-dt">ソロ</dt>
-                  <dd class="p-plan__price-dd">22,000</dd>
-                  <dt class="p-plan__price-dt">ファミリー</dt>
-                  <dd class="p-plan__price-dd">33,000</dd>
-                </dl>
-                <p class="p-plan__price-description">
-                  データ<span>50</span>枚お渡し
-                </p>
-                <button class="p-plan__button-reserve--pc">ご予約</button>
-                <div class="u-pb32--card"></div>
+              <div class="p-plan__content-card-wrapper">
+                <div class="p-plan__content-card">
+                  <div class="p-plan__content-card-contents">
+                    <h2 class="p-plan__content-title">スタジオプラン</h2>
+                    <p class="p-plan__content-description">
+                      自然光たっぷりのスタジオで<br />ペットと家族の撮影プラン
+                    </p>
+                    <dl class="p-plan__price">
+                      <dt class="p-plan__price-dt">ソロ</dt>
+                      <dd class="p-plan__price-dd">22,000</dd>
+                      <dt class="p-plan__price-dt">ファミリー</dt>
+                      <dd class="p-plan__price-dd">33,000</dd>
+                    </dl>
+                    <p class="p-plan__price-description">
+                      データ<span>50</span>枚お渡し
+                    </p>
+                  </div>
+                  <!-- /.p-plan__content-card-contents -->
+                  <div class="p-plan__content-card-button--lg">
+                    <button class="p-plan__button-reserve--pc">ご予約</button>
+                    <div class="u-pb32--card"></div>
+                  </div>
+                  <!-- ./p-plan__content-card-button--lg -->
+                </div>
               </div>
               <!-- /.__content-card -->
               <div class="p-plan__button-area">
@@ -181,12 +191,12 @@
               </div>
             </div>
             <!--  /.p-plan__content-studio -->
+
             <div class="u-pb80--plan"></div>
           </div>
           <!-- /.p-plan__content -->
         </div>
         <!-- /.c-innner -->
-
         <!-- p-plan__content--location -->
         <div class="p-plan__content--location">
           <div class="c-inner">
@@ -206,25 +216,29 @@
                   />
                 </div>
                 <!-- <span class="p-plan__content-image-accent--right"
-                  >Location</span
-                > -->
+                          >Location</span
+                        > -->
               </div>
               <div class="p-plan__content-card">
-                <h2 class="p-plan__content-header">ロケーションプラン</h2>
-                <p class="p-plan__content-description">
-                  自然や街中を自然光で,<br />ペットと家族の撮影プラン
-                </p>
-                <dl class="p-plan__price">
-                  <dt class="p-plan__price-dt">ソロ</dt>
-                  <dd class="p-plan__price-dd">33,000</dd>
-                  <dt class="p-plan__price-dt">ファミリー</dt>
-                  <dd class="p-plan__price-dd">44,000</dd>
-                </dl>
-                <p class="p-plan__price-description">
-                  データ<span>50</span>枚お渡し
-                </p>
-                <button class="p-plan__button-reserve--pc">ご予約</button>
-                <div class="u-pb32--card"></div>
+                <div class="p-plan__content-card-contents">
+                  <h2 class="p-plan__content-title">ロケーションプラン</h2>
+                  <p class="p-plan__content-description">
+                    自然や街中を自然光で,<br />ペットと家族の撮影プラン
+                  </p>
+                  <dl class="p-plan__price">
+                    <dt class="p-plan__price-dt">ソロ</dt>
+                    <dd class="p-plan__price-dd">33,000</dd>
+                    <dt class="p-plan__price-dt">ファミリー</dt>
+                    <dd class="p-plan__price-dd">44,000</dd>
+                  </dl>
+                  <p class="p-plan__price-description">
+                    データ<span>50</span>枚お渡し
+                  </p>
+                </div>
+                <div class="p-plan__content-card-button--lg">
+                  <button class="p-plan__button-reserve--pc">ご予約</button>
+                  <div class="u-pb32--card"></div>
+                </div>
               </div>
               <!-- /.p-plan__content-card -->
               <div class="p-plan__button-area">
@@ -261,31 +275,36 @@
                 <!-- <span class="p-plan__content-mage-accent">Stamp</span> -->
               </div>
               <div class="p-plan__content-card">
-                <h2 class="p-plan__content-header">スタンププラン</h2>
-                <p class="p-plan__content-description">
-                  ペットの撮影・データの切り抜き<br />文字入れスタンプ作成
-                </p>
-                <dl class="p-plan__price">
-                  <dt class="p-plan__price-dt--stamp">
-                    データ切り抜きお渡しのみ
-                  </dt>
-                  <dd class="p-plan__price-dd--quantity">16</dd>
-                  <dd class="p-plan__price-dd">22,000</dd>
-                </dl>
-                <dl class="p-plan__price u-pb48 u-mb0">
-                  <dt class="p-plan__price-dt--stamp">
-                    切り抜きデータお渡し＋文字入れスタンプ作成
-                  </dt>
-                  <dd class="p-plan__price-dd--quantity">16</dd>
-                  <dd class="p-plan__price-dd">44,000</dd>
-                  <dd class="p-plan__price-dd--quantity">32</dd>
-                  <dd class="p-plan__price-dd">55,000</dd>
-                  <dd class="p-plan__price-dd--quantity">40</dd>
-                  <dd class="p-plan__price-dd">66,000</dd>
-                </dl>
-                <button class="p-plan__button-reserve--pc">ご予約</button>
-                <div class="u-pb32--card"></div>
+                <div class="p-plan__content-card-contents">
+                  <h2 class="p-plan__content-title">スタンププラン</h2>
+                  <p class="p-plan__content-description">
+                    ペットの撮影・データの切り抜き<br />文字入れスタンプ作成
+                  </p>
+                  <dl class="p-plan__price">
+                    <dt class="p-plan__price-dt--stamp">
+                      データ切り抜きお渡しのみ
+                    </dt>
+                    <dd class="p-plan__price-dd--quantity">16</dd>
+                    <dd class="p-plan__price-dd">22,000</dd>
+                  </dl>
+                  <dl class="p-plan__price u-pb48 u-mb0">
+                    <dt class="p-plan__price-dt--stamp">
+                      切り抜きデータお渡し＋文字入れスタンプ作成
+                    </dt>
+                    <dd class="p-plan__price-dd--quantity">16</dd>
+                    <dd class="p-plan__price-dd">44,000</dd>
+                    <dd class="p-plan__price-dd--quantity">32</dd>
+                    <dd class="p-plan__price-dd">55,000</dd>
+                    <dd class="p-plan__price-dd--quantity">40</dd>
+                    <dd class="p-plan__price-dd">66,000</dd>
+                  </dl>
+                </div>
+                <div class="p-plan__content-card-button--lg">
+                  <button class="p-plan__button-reserve--pc">ご予約</button>
+                  <div class="u-pb32--card"></div>
+                </div>
               </div>
+              <!-- /.p-plan__content-card -->
               <div class="p-plan__button-area">
                 <button class="p-plan__button-reserve">ご予約</button>
                 <button class="p-plan__button-line u-mb62">
@@ -321,24 +340,22 @@
                     alt=""
                     class="p-voice__card--image"
                   />
+                  <img
+                    src="./asset/image/icon-instagram.png"
+                    alt=""
+                    class="p-voice__icon--instagram"
+                  />
+                </div>
+                <!-- /.p-voice__card--front -->
+                <div class="p-voice__card--back">
                   <a
                     href="https://www.instagram.com/studiodoggy_/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="./asset/image/icon-instagram.png"
-                      alt=""
-                      class="p-voice__icon--instagram"
-                    />
-                  </a>
-                </div>
-                <!-- /.p-voice__card--front -->
-                <div class="p-voice__card--back">
-                  <p>
                     今回はPlan Aだったけど次は成人する娘とPlan
                     Bでお願いしたいです。素敵な写真ありがとうございました🐶✨
-                  </p>
+                  </a>
                 </div>
               </div>
               <!-- /.p-voice-card -->
@@ -824,7 +841,7 @@
                   <!-- <i class="fa-solid fa-phone"></i> -->
                   電話
                 </dt>
-                <dd>1234-56-7890</dd>
+                <dd>0550-98-8322</dd>
               </dl>
             </div>
           </div>
