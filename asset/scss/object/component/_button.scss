@@ -1,0 +1,30 @@
+@use '../../foundation/variable' as *;
+
+/* button
+--------------------------- */
+
+.c-button {
+  &__reserve {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 5.6rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__reserve--pc {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 5.6rem;
+    // margin-bottom: 4.8rem;
+    display: none;
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      display: block;
+    }
+  }
+
+  &__line {
+    border: $color-gray-500 1px solid;
+    padding: 1.6rem 1.4rem;
+  }
+}

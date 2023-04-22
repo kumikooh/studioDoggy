@@ -3,12 +3,12 @@ $(function () {
   //   $(this).toggleClass("flipped");
   // });
 
-  $(".p-voice__card").on("mouseenter", function () {
-    $(this).toggleClass("flipped");
+  $('.p-voice__card').on('mouseenter', function () {
+    $(this).toggleClass('flipped');
   });
 
-  $(".p-voice__card").on("mouseleave", function () {
-    $(this).toggleClass("flipped");
+  $('.p-voice__card').on('mouseleave', function () {
+    $(this).toggleClass('flipped');
   });
 
   // $(".p-voice__card").on("touchstart", function () {
