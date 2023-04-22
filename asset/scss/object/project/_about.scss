@@ -1,4 +1,4 @@
-@use "../../foundation/variable" as *;
+@use '../../foundation/variable' as *;
 
 /* about
 --------------------------- */
@@ -15,11 +15,9 @@
     align-items: center;
 
     @include breakpoint(tablet) {
-      // width: 100%;
     }
     @include breakpoint(pc) {
       display: block;
-      // padding-left: 8rem;
     }
 
     .logo-text {
@@ -63,6 +61,72 @@
     }
     @include breakpoint(pc) {
       padding-left: 6.4rem;
+    }
+  }
+
+  &__studio {
+    padding-bottom: 8rem;
+    .gallery {
+      columns: 1; /*段組みの数*/
+
+      @include breakpoint(tablet) {
+        columns: 2;
+      }
+      @include breakpoint(pc) {
+        columns: 3;
+      }
+    }
+
+    .gallery li {
+      margin-bottom: 16px; /*各画像下に余白をつける*/
+    }
+
+    /*ギャラリー内のイメージは横幅100%にする*/
+    .gallery img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom; /*画像の下にできる余白を削除*/
+    }
+
+    /*========= レイアウトのためのCSS ===============*/
+
+    a {
+      color: #333;
+    }
+
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+
+    /*画像を出現させるアニメーションCSS*/
+
+    .flipLeft {
+      animation: none;
+      transform: none;
+      ransition: unset;
+
+      @include breakpoint(tablet) {
+      }
+      @include breakpoint(pc) {
+        animation-name: flipLeft;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        perspective-origin: left center;
+        opacity: 0;
+      }
+    }
+
+    @keyframes flipLeft {
+      from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+      }
     }
   }
 }

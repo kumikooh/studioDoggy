@@ -25,7 +25,7 @@
     padding-top: 6.4rem;
 
     @include breakpoint(pc) {
-      height: 680px;
+      height: 744px;
       position: relative;
       margin: 0 auto;
     }
@@ -35,7 +35,7 @@
     padding-top: 6.4rem;
 
     @include breakpoint(pc) {
-      height: 680px;
+      height: 840px;
     }
   }
 
@@ -141,8 +141,15 @@
 
     &.third-right {
       @include breakpoint(pc) {
+        top: 54%;
         // padding-bottom: 2rem;
       }
+    }
+  }
+
+  &__content-card-wrapper {
+    @include breakpoint(pc) {
+      width: 420px;
     }
   }
 
