@@ -1,52 +1,56 @@
-@use "../../foundation/variable" as *;
+@use '../../foundation/variable' as *;
 
 /* plan
 --------------------------- */
 .p-plan {
   background: url(../image/halftone.png);
 
-  &__content {
-    // @include breakpoint(pc) {
-    //   position: relative;
-    //   width: 960px;
-    //   height: auto;
-    //   margin: 0 auto;
-    // }
+  &__content--studio,
+  &__content--stamp {
+    @include breakpoint(pc) {
+      position: relative;
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content--studio {
+    height: 664px;
   }
 
   &__content--location {
     background: url(../image/seamless_paper_texture.webp);
     padding-top: 6.4rem;
+
+    @include breakpoint(pc) {
+      height: 680px;
+      position: relative;
+      margin: 0 auto;
+    }
   }
 
   &__content--stamp {
     padding-top: 6.4rem;
 
     @include breakpoint(pc) {
-      // position: relative;
-      // width: 960px;
-      // height: auto;
-      // margin: 0 auto;
+      height: 680px;
     }
   }
 
-  &__content-image-wrapper {
+  &__images {
     @include breakpoint(pc) {
-      // position: relative;
+      position: absolute;
+      z-index: 5;
     }
-  }
 
-  &__content-image {
-    margin-bottom: 2.4rem;
-
-    @include breakpoint(tablet) {
-    }
-    @include breakpoint(pc) {
-      // display: block;
-      // position: absolute;
-      // top: 50;
-      // left: 0;
-      // z-index: 5;
+    &.second-right {
+      @include breakpoint(pc) {
+        position: absolute;
+        top: 36%;
+        right: 0;
+        width: 55%;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -68,12 +72,7 @@
     }
     @include breakpoint(pc) {
       margin: 0;
-    }
-  }
-
-  &__content-card-wrapper {
-    @include breakpoint(pc) {
-      // position: relative;
+      width: 536px;
     }
   }
 
@@ -88,20 +87,57 @@
       width: 75%;
     }
     @include breakpoint(pc) {
-      // max-width: 592px;
       display: flex;
       justify-content: space-between;
       flex-direction: row-reverse;
-      // display: block;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // position: absolute;
-      // top: 50%;
-      // right: 0;
-      // transform: translateY(-50%);
       padding-left: 4%;
       padding-right: 4%;
+      padding-top: 4rem;
+    }
+
+    &.first-right,
+    &.third-right {
+      @include breakpoint(pc) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 70%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.first-right {
+      @include breakpoint(pc) {
+        padding-bottom: 2rem;
+      }
+    }
+
+    &.second-left {
+      @include breakpoint(pc) {
+        position: absolute;
+        top: 32%;
+        left: 50;
+        width: 50%;
+
+        display: flex;
+      }
+      .child-1 {
+        @include breakpoint(pc) {
+          order: 2;
+        }
+      }
+
+      .child-2 {
+        @include breakpoint(pc) {
+          order: 1;
+        }
+      }
+    }
+
+    &.third-right {
+      @include breakpoint(pc) {
+        padding-bottom: 2rem;
+      }
     }
   }
 
@@ -122,8 +158,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    // text-align: center;
     margin-bottom: 1.6rem;
+    line-height: 2;
   }
 
   &__price-dt {
@@ -146,11 +182,11 @@
     padding-left: 8%;
 
     &::before {
-      content: "¥";
+      content: '¥';
     }
 
     &::after {
-      content: "（税込み）";
+      content: '（税込み）';
       font-size: 1.2rem;
     }
   }
@@ -161,7 +197,7 @@
     font-weight: 600;
 
     &::after {
-      content: "枚";
+      content: '枚';
       font-size: 1.4rem;
       font-weight: 400;
     }
@@ -195,29 +231,5 @@
     @include breakpoint(pc) {
       display: none;
     }
-  }
-
-  &__button-reserve {
-    border: $color-gray-500 1px solid;
-    padding: 1.6rem 5.6rem;
-    margin-bottom: 4.8rem;
-  }
-
-  &__button-reserve--pc {
-    border: $color-gray-500 1px solid;
-    padding: 1.6rem 5.6rem;
-    // margin-bottom: 4.8rem;
-    display: none;
-
-    @include breakpoint(tablet) {
-    }
-    @include breakpoint(pc) {
-      display: block;
-    }
-  }
-
-  &__button-line {
-    border: $color-gray-500 1px solid;
-    padding: 1.6rem 1.4rem;
   }
 }
