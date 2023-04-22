@@ -15,7 +15,9 @@
   }
 
   &__content--studio {
-    height: 664px;
+    @include breakpoint(pc) {
+      height: 664px;
+    }
   }
 
   &__content--location {
@@ -38,6 +40,7 @@
   }
 
   &__images {
+    padding-bottom: 2.4rem;
     @include breakpoint(pc) {
       position: absolute;
       z-index: 5;
@@ -117,7 +120,7 @@
         position: absolute;
         top: 32%;
         left: 50;
-        width: 50%;
+        width: 60%;
 
         display: flex;
       }
@@ -143,15 +146,23 @@
 
   &__content-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 2.4rem;
+
+    @include breakpoint(pc) {
+      font-size: 2.4rem;
+    }
   }
 
   &__content-description {
     text-align: center;
     font-size: 1.4rem;
     margin-bottom: 3.2rem;
+
+    @include breakpoint(pc) {
+      font-size: 1.8rem;
+    }
   }
 
   &__price {
