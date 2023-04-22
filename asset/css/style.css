@@ -679,8 +679,6 @@ a:hover img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    padding-left: 4%;
-    padding-right: 4%;
     padding-top: 4rem;
   }
 }
@@ -689,14 +687,10 @@ a:hover img {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 70%;
+    width: 700px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-  }
-}
-@media (min-width: 960px) {
-  .p-plan__content-card.first-right {
-    padding-bottom: 2rem;
+    padding-left: 3%;
   }
 }
 @media (min-width: 960px) {
@@ -704,7 +698,8 @@ a:hover img {
     position: absolute;
     top: 32%;
     left: 50;
-    width: 60%;
+    width: 700px;
+    padding-right: 2%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -722,11 +717,6 @@ a:hover img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-}
-@media (min-width: 960px) {
-  .p-plan__content-card.third-right {
-    padding-bottom: 2rem;
   }
 }
 .p-plan__content-title {
