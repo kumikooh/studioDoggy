@@ -590,8 +590,10 @@ a:hover img {
     margin: 0 auto;
   }
 }
-.p-plan__content--studio {
-  height: 664px;
+@media (min-width: 960px) {
+  .p-plan__content--studio {
+    height: 664px;
+  }
 }
 .p-plan__content--location {
   background: url(../image/seamless_paper_texture.webp);
@@ -611,6 +613,9 @@ a:hover img {
   .p-plan__content--stamp {
     height: 680px;
   }
+}
+.p-plan__images {
+  padding-bottom: 2.4rem;
 }
 @media (min-width: 960px) {
   .p-plan__images {
@@ -699,7 +704,7 @@ a:hover img {
     position: absolute;
     top: 32%;
     left: 50;
-    width: 50%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -726,14 +731,24 @@ a:hover img {
 }
 .p-plan__content-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
+}
+@media (min-width: 960px) {
+  .p-plan__content-title {
+    font-size: 2.4rem;
+  }
 }
 .p-plan__content-description {
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 3.2rem;
+}
+@media (min-width: 960px) {
+  .p-plan__content-description {
+    font-size: 1.8rem;
+  }
 }
 .p-plan__price {
   display: -webkit-box;
