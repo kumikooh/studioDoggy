@@ -80,9 +80,11 @@
     }
   }
   &__content-img-lg--second {
+    display: none;
     @include breakpoint(tablet) {
     }
     @include breakpoint(pc) {
+      display: block;
       width: 83%;
     }
   }
