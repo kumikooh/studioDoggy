@@ -103,7 +103,7 @@ a:hover img {
 /* inner
 --------------------------- */
 .c-inner {
-  max-width: 960px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -430,8 +430,9 @@ a:hover img {
 }
 .c-button__reserve--pc {
   border: #3e3e3e 1px solid;
-  padding: 1.6rem 5.6rem;
+  padding: 1.8rem 6rem;
   display: none;
+  font-size: 2rem;
 }
 @media (min-width: 960px) {
   .c-button__reserve--pc {
@@ -583,6 +584,32 @@ a:hover img {
   /*========= レイアウトのためのCSS ===============*/
   /*画像を出現させるアニメーションCSS*/
 }
+.p-about__studio h3 {
+  font-size: 30px;
+  font-size: 3rem;
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+.p-about__studio h3 span {
+  font-size: 18px;
+  font-size: 1.8rem;
+  display: block;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.p-about__studio h3:before {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 3px;
+  content: "";
+  background: #3e3e3e;
+}
 .p-about__studio .gallery {
   -webkit-columns: 1;
      -moz-columns: 1;
@@ -622,7 +649,8 @@ a:hover img {
           animation: none;
   -webkit-transform: none;
           transform: none;
-  ransition: unset;
+  -webkit-transition: unset;
+  transition: unset;
 }
 @media (min-width: 960px) {
   .p-about__studio .flipLeft {
@@ -661,6 +689,51 @@ a:hover img {
     opacity: 1;
   }
 }
+.p-about__studio-image-box.gallery {
+  -webkit-columns: 1;
+     -moz-columns: 1;
+          columns: 1; /*段組みの数*/
+}
+@media (min-width: 520px) {
+  .p-about__studio-image-box.gallery {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+  }
+}
+@media (min-width: 960px) {
+  .p-about__studio-image-box.gallery {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+  }
+}
+.p-about__studio-introduction {
+  margin-bottom: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.p-about__studio-introduction p {
+  text-align: center;
+  max-width: 960px;
+}
+.p-about__studio--american-vintage {
+  margin-bottom: 8rem;
+}
+.p-about__studio-text {
+  margin-bottom: 16px;
+}
 
 /* plan
 --------------------------- */
@@ -670,7 +743,7 @@ a:hover img {
 @media (min-width: 960px) {
   .p-plan__content--studio, .p-plan__content--stamp {
     position: relative;
-    width: 960px;
+    width: 1220px;
     margin: 0 auto;
   }
 }
@@ -705,13 +778,14 @@ a:hover img {
   .p-plan__images {
     position: absolute;
     z-index: 5;
+    padding-left: 2.4rem;
   }
 }
 @media (min-width: 960px) {
   .p-plan__images.second-right {
     position: absolute;
-    top: 36%;
-    right: 0;
+    top: 40%;
+    right: 34px;
     width: 55%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -735,7 +809,16 @@ a:hover img {
 @media (min-width: 960px) {
   .p-plan__content-img-lg {
     margin: 0;
-    width: 536px;
+    width: 60%;
+  }
+}
+.p-plan__content-img-lg--second {
+  display: none;
+}
+@media (min-width: 960px) {
+  .p-plan__content-img-lg--second {
+    display: block;
+    width: 83%;
   }
 }
 .p-plan__content-card {
@@ -763,14 +846,16 @@ a:hover img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    padding-top: 4rem;
+    padding-left: 4%;
+    padding-right: 3.2%;
+    padding-top: 5rem;
   }
 }
 @media (min-width: 960px) {
   .p-plan__content-card.first-right, .p-plan__content-card.third-right {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 56%;
+    right: 44px;
     width: 700px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -778,12 +863,18 @@ a:hover img {
   }
 }
 @media (min-width: 960px) {
+  .p-plan__content-card.first-right {
+    height: 433px;
+  }
+}
+@media (min-width: 960px) {
   .p-plan__content-card.second-left {
     position: absolute;
     top: 32%;
-    left: 50;
+    left: 170px;
     width: 700px;
     padding-right: 2%;
+    height: 433px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -806,6 +897,7 @@ a:hover img {
 @media (min-width: 960px) {
   .p-plan__content-card.third-right {
     top: 54%;
+    height: 495px;
   }
 }
 @media (min-width: 960px) {

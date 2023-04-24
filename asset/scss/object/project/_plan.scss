@@ -9,7 +9,7 @@
   &__content--stamp {
     @include breakpoint(pc) {
       position: relative;
-      width: 960px;
+      width: 1220px;
       margin: 0 auto;
     }
   }
@@ -44,13 +44,14 @@
     @include breakpoint(pc) {
       position: absolute;
       z-index: 5;
+      padding-left: 2.4rem;
     }
 
     &.second-right {
       @include breakpoint(pc) {
         position: absolute;
-        top: 36%;
-        right: 0;
+        top: 40%;
+        right: 34px;
         width: 55%;
         transform: translateY(-50%);
       }
@@ -75,7 +76,16 @@
     }
     @include breakpoint(pc) {
       margin: 0;
-      width: 536px;
+      width: 60%;
+    }
+  }
+  &__content-img-lg--second {
+    display: none;
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      display: block;
+      width: 83%;
     }
   }
 
@@ -93,17 +103,18 @@
       display: flex;
       justify-content: space-between;
       flex-direction: row-reverse;
-      // padding-left: 4%;
-      // padding-right: 4%;
-      padding-top: 4rem;
+      padding-left: 4%;
+      padding-right: 3.2%;
+      padding-top: 5rem;
+      // padding: 44px 24px 0 24px;
     }
 
     &.first-right,
     &.third-right {
       @include breakpoint(pc) {
         position: absolute;
-        top: 50%;
-        right: 0;
+        top: 56%;
+        right: 44px;
         width: 700px;
         transform: translateY(-50%);
         padding-left: 3%;
@@ -112,7 +123,7 @@
 
     &.first-right {
       @include breakpoint(pc) {
-        // padding-bottom: 2rem;
+        height: 433px;
       }
     }
 
@@ -120,9 +131,10 @@
       @include breakpoint(pc) {
         position: absolute;
         top: 32%;
-        left: 50;
+        left: 170px;
         width: 700px;
         padding-right: 2%;
+        height: 433px;
 
         display: flex;
       }
@@ -142,7 +154,7 @@
     &.third-right {
       @include breakpoint(pc) {
         top: 54%;
-        // padding-bottom: 2rem;
+        height: 495px;
       }
     }
   }
