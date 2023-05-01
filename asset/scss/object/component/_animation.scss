@@ -1,0 +1,131 @@
+@use './foundation/variable' as *;
+
+/* animation
+--------------------------- */
+
+//  ふわっ =======================================
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 2s; /*ゆっくり出現するため数値変更*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+//  ボンッ =======================================
+
+.zoomOut {
+  animation-name: zoomOutAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOutAnime {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+//  パタっ =======================================
+
+.flipLeft {
+  animation-name: flipLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  perspective-origin: left center;
+  opacity: 0;
+}
+
+@keyframes flipLeft {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.zoomOutTrigger {
+  opacity: 0;
+}
+
+/*===========================================================*/
+/* 印象編　8 テキストの動き　/
+/*===========================================================*/
+
+/*========= 8-2 テキストが流れるように出現（左から右） ===============*/
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 10px; /*英語がはみ出るので見えるように余白追記*/
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/*左右のアニメーション*/
+.leftAnime,
+.rightAnime {
+  opacity: 0; /*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  animation-name: slideText-100;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideText-100 {
+  from {
+    transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+  animation-name: slideText100;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideText100 {
+  from {
+    transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}

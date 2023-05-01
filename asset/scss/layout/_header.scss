@@ -1,14 +1,112 @@
-@use "./../foundation/variable" as *;
+@use './../foundation/variable' as *;
 
 /* header
 --------------------------- */
+
+.header-area {
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: $color-gray-0;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 500;
+  span {
+    display: block;
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+    }
+  }
+}
+
+.header-area h1 {
+  display: block;
+  width: 60%;
+  // font-size: 6vw;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header-area p {
+  font-size: 1.3vw;
+  letter-spacing: 0.4em;
+  margin: 0 0 20px 0;
+}
+
+.header-area p br {
+  display: none;
+}
+
+.header-logo {
+  width: 60%;
+}
+
+@media screen and (max-width: 960px) {
+  .header-area h1 {
+    font-size: 4rem;
+    width: 100%;
+  }
+  .header-area p {
+    font-size: 0.8rem;
+    white-space: no;
+  }
+
+  .header-area p br {
+    display: block;
+  }
+}
+
+// ---------------------------------------
+// impression movement
+// ---------------------------------------
+
+// /*==================================================
+//     印象編　6-7 スクロールするとヘッダー背景画像が拡大（エリアの動き）
+// ===================================*/
+
+#header {
+  position: relative; /*背景を設定するdivの基点とするためrelativeをかける*/
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#header-img {
+  position: fixed; /*背景を固定するためfixedをかける*/
+  z-index: 1; /*#container,#footerよりも下に配置するために数値を小さくする*/
+  top: 0; /*topの位置がJSで変化*/
+  /*以下画面で背景画像を表示させるための指定*/
+  width: 100%;
+  height: 100vh;
+  background: url('../image/main.jpg') no-repeat top center; /*背景画像の設定*/
+  background-size: cover;
+  transform-origin: center; /*変化する基点を中心からに設定*/
+  opacity: 0.9;
+}
+
+#container,
+#footer {
+  position: relative; /*#header-imgよりも配置を上にするためにrelativeをつける*/
+  z-index: 3; /*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
+  background: #f8f9fa;
+}
+
+// ------------------------------------
+// もとの
+// ------------------------------------
 
 .l-header {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: transparent;
-  z-index: 10;
+  z-index: 100;
 
   &__content {
     display: flex;

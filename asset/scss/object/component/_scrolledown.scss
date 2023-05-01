@@ -1,28 +1,91 @@
-@use "../../foundation/variable" as *;
+@use '../../foundation/variable' as *;
 
 /* scrolldown
 --------------------------- */
-/*========= スクロールダウンのためのCSS ===============*/
-
-/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+// |が動くほう =================================
 
 /*スクロールダウン全体の場所*/
-.c-scrolldown {
+.scrolldown {
   /*描画位置※位置は適宜調整してください*/
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+  z-index: 2;
+}
+
+.scrolldown span {
+  /*描画位置*/
   position: absolute;
+  left: -15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: $color-gray-0;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.scrolldown::after {
+  content: '';
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: $color-gray-0;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+// ●が動くほう =================================
+
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+  /*描画位置※位置は適宜調整してください*/
+  position: fixed;
   bottom: 10px;
   left: 50%;
   z-index: 2;
 }
 
 /*Scrollテキストの描写*/
-.c-scrolldown span {
+.scrolldown2 span {
   /*描画位置*/
   position: absolute;
   left: 10px;
   bottom: 10px;
   /*テキストの形状*/
-  color: $color-gray-500;
+  color: $color-gray-0;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   /*縦書き設定*/
@@ -32,8 +95,8 @@
 }
 
 /* 丸の描写 */
-.c-scrolldown:before {
-  content: "";
+.scrolldown2:before {
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -42,7 +105,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: $color-gray-500;
+  background: $color-gray-0;
   /*丸の動き1.6秒かけて透過し、永遠にループ*/
   animation: circlemove 1.6s ease-in-out infinite,
     cirlemovehide 1.6s ease-out infinite;
@@ -75,8 +138,8 @@
 }
 
 /* 線の描写 */
-.c-scrolldown:after {
-  content: "";
+.scrolldown2:after {
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -84,5 +147,5 @@
   /*線の形状*/
   width: 2px;
   height: 50px;
-  background: $color-gray-500;
+  background: $color-gray-0;
 }

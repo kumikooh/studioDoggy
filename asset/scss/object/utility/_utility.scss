@@ -1,4 +1,4 @@
-@use "../../foundation/variable" as *;
+@use '../../foundation/variable' as *;
 
 /* utility
 --------------------------- */
@@ -10,7 +10,7 @@
 }
 
 .u-pb32--card {
-  padding-bottom: 3.2rem;
+  padding-bottom: 1.1rem;
   display: none;
 
   @include breakpoint(tablet) {

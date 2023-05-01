@@ -1,8 +1,8 @@
 @use 'foundation/base';
 @use 'foundation/variable';
 
+@use 'layout/area';
 @use 'layout/header';
-// @use "layout/container";
 @use 'layout/footer';
 
 // Component
@@ -11,13 +11,20 @@
 @use 'object/component/scrolledown';
 @use 'object/component/accordion';
 @use 'object/component/button';
+@use 'object/component/page-top';
+@use 'object/component/animation';
+@use 'object/component/_modale';
 
 // Project
+@use 'object/project/splash';
 @use 'object/project/hamburger';
-@use 'object/project/hero';
+// @use 'object/project/hero';
+@use 'object/project/lead';
 @use 'object/project/about';
+@use 'object/project/studio-gallery';
 @use 'object/project/plan';
 @use 'object/project/voice';
+@use 'object/project/contact';
 @use 'object/project/faq';
 @use 'object/project/access';
 @use 'object/project/gallery';

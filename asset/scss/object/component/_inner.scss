@@ -1,11 +1,28 @@
+@use './foundation/variable' as *;
+
 /* inner
 --------------------------- */
-.c-inner {
-  max-width: 1220px;
+.inner {
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 70px;
+  // @include breakpoint(tablet) {
+  // }
+  // @include breakpoint(pc) {
+  // }
+  // @include breakpoint(pc-w) {
+  //   // max-width: 1440px;
+  // }
 }
 
-// .c-innner--p-location {
-//   background: url(../image/seamless_paper_texture.webp);
-// }
+@media screen and (max-width: 940px) {
+  .inner {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .inner {
+    padding: 16px;
+  }
+}

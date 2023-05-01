@@ -1,14 +1,88 @@
-@use "./../foundation/variable" as *;
+@use './../foundation/variable' as *;
 
 /* footer
 --------------------------- */
-.l-footer {
-  background-color: $color-gray-500;
-  color: $color-gray-200;
-  padding: 0.8rem 0;
 
-  &__copyright {
-    display: block;
+#footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: url(../image/polaroid.webp);
+
+  span.footer-description {
+    color: $color-text-logo;
+  }
+}
+
+#footer dl {
+  width: 30%;
+}
+
+#footer dl dt {
+  font-size: 0.8rem;
+}
+
+#footer dl dd {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  #footer dl {
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer dl dd {
+    font-size: 1.5rem;
+  }
+}
+
+#footer .footer-list {
+  width: 65%;
+  text-align: right;
+}
+
+#footer ul li {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  line-height: 3;
+}
+
+#footer small {
+  text-align: right;
+  margin: 20px 0 0 0;
+  display: block;
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+#footer #page-top span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 900px) {
+  #footer dl,
+  #footer .footer-list,
+  #footer small {
+    width: 100%;
     text-align: center;
+  }
+}
+
+.footer-logo {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(pc) {
   }
 }

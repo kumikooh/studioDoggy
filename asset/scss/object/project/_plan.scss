@@ -2,67 +2,97 @@
 
 /* plan
 --------------------------- */
-.p-plan {
-  background: url(../image/halftone.png);
+.plan-text {
+  text-align: center;
+  margin: 0 auto 4rem;
+  font-size: 0.8rem;
+  width: 80%;
+}
 
+.plan {
+  background: url('../image/halftone.png');
+}
+
+.plan-content-wrapper {
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(pc) {
+    display: flex;
+  }
+}
+
+.p-plan {
   &__content--studio,
   &__content--stamp {
     @include breakpoint(pc) {
-      position: relative;
-      width: 1220px;
-      margin: 0 auto;
+      // position: relative;
+      // width: 100%;
+      // margin: 0 auto;
+      // background: url('../image/halftone.png');
     }
   }
 
   &__content--studio {
     @include breakpoint(pc) {
-      height: 664px;
+      // height: 664px;
+      padding: 0;
     }
   }
 
   &__content--location {
-    background: url(../image/seamless_paper_texture.webp);
-    padding-top: 6.4rem;
+    // background: url('../image/seamless_paper_texture.webp');
+    // padding-top: 6.4rem;
+    padding: 8rem 0;
 
     @include breakpoint(pc) {
-      height: 744px;
-      position: relative;
-      margin: 0 auto;
+      // height: 744px;
+      // position: relative;
+      // margin: 0 auto;
+      padding: 0;
     }
   }
 
   &__content--stamp {
-    padding-top: 6.4rem;
+    // padding-top: 6.4rem;
+    padding: 0 0 8rem;
 
     @include breakpoint(pc) {
-      height: 840px;
+      // height: 840px;
+      padding: 0;
     }
   }
 
   &__images {
-    padding-bottom: 2.4rem;
+    padding-bottom: 1rem;
     @include breakpoint(pc) {
-      position: absolute;
-      z-index: 5;
-      padding-left: 2.4rem;
+      // position: absolute;
+      // z-index: 10;
+      // padding-left: 3rem;
     }
 
-    &.second-right {
+    &.second-right,
+    &__content-img {
       @include breakpoint(pc) {
-        position: absolute;
-        top: 40%;
-        right: 34px;
-        width: 55%;
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 40%;
+        // left: 550px;
+        // width: 64%;
+        // transform: translateY(-50%);
       }
     }
   }
 
   &__content-img {
     @include breakpoint(tablet) {
+      width: 616px;
+      height: 424px;
+      // width: 75%;
+      // margin: auto;
       display: none;
     }
     @include breakpoint(pc) {
+      // margin: 0;
+      // width: 60%;
     }
   }
 
@@ -71,127 +101,132 @@
 
     @include breakpoint(tablet) {
       display: block;
-      width: 75%;
+      width: 82%;
       margin: auto;
     }
     @include breakpoint(pc) {
-      margin: 0;
-      width: 60%;
+      // margin: 0;
+      // width: 60%;
     }
   }
+
   &__content-img-lg--second {
     display: none;
     @include breakpoint(tablet) {
+      display: block;
+      width: 82%;
+      margin: auto;
     }
     @include breakpoint(pc) {
-      display: block;
-      width: 83%;
+      // width: 60%;
     }
   }
 
   &__content-card {
     width: 98%;
-    padding-top: 3.2rem;
+    // padding-top: 1.25rem;
     margin: 0 auto;
     background-color: #fff9eb;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    padding: 1.25rem 1rem;
 
     @include breakpoint(tablet) {
-      width: 75%;
+      width: 85%;
+      // padding: 1.25rem 1rem;
     }
     @include breakpoint(pc) {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      padding-left: 4%;
-      padding-right: 3.2%;
-      padding-top: 5rem;
+      // display: flex;
+      // justify-content: space-between;
+      // flex-direction: row-reverse;
+      // padding-left: 3%;
+      // padding-right: 3.2%;
+      // padding-top: 2rem;
       // padding: 44px 24px 0 24px;
     }
 
     &.first-right,
     &.third-right {
       @include breakpoint(pc) {
-        position: absolute;
-        top: 56%;
-        right: 44px;
-        width: 700px;
-        transform: translateY(-50%);
-        padding-left: 3%;
+        // position: absolute;
+        // top: 56%;
+        // right: 90px;
+        // width: 700px;
+        // transform: translateY(-50%);
+        // padding-left: 3%;
       }
     }
 
     &.first-right {
       @include breakpoint(pc) {
-        height: 433px;
+        // height: 433px;
       }
     }
 
     &.second-left {
       @include breakpoint(pc) {
-        position: absolute;
-        top: 32%;
-        left: 170px;
-        width: 700px;
-        padding-right: 2%;
-        height: 433px;
+        // position: absolute;
+        // top: 32%;
+        // left: 80px;
+        // width: 700px;
+        // padding-right: 2%;
+        // height: 433px;
 
-        display: flex;
+        // display: flex;
       }
       .child-1 {
         @include breakpoint(pc) {
-          order: 2;
+          // order: 2;
         }
       }
 
       .child-2 {
         @include breakpoint(pc) {
-          order: 1;
+          // order: 1;
         }
       }
     }
 
     &.third-right {
       @include breakpoint(pc) {
-        top: 54%;
-        height: 495px;
+        // top: 54%;
+        // height: 495px;
       }
     }
   }
 
   &__content-card-wrapper {
     @include breakpoint(pc) {
-      width: 420px;
+      // width: 420px;
     }
   }
 
   &__content-title {
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 2.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 
     @include breakpoint(pc) {
-      font-size: 2.4rem;
+      font-size: 1.5rem;
     }
   }
 
   &__content-description {
     text-align: center;
-    font-size: 1.4rem;
-    margin-bottom: 3.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 
-    @include breakpoint(pc) {
-      font-size: 1.8rem;
-    }
+    // @include breakpoint(pc) {
+    //   font-size: 1.8rem;
+    // }
   }
 
   &__price {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 1.6rem;
-    line-height: 2;
+    margin-bottom: 1rem;
+    line-height: 1;
   }
 
   &__price-dt {
@@ -200,8 +235,8 @@
   }
 
   &__price-dt--stamp {
-    font-size: 1.5rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1;
     width: 100%;
     padding: 0 9%;
   }
@@ -210,7 +245,7 @@
     width: 60%;
     text-align: center;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding-left: 8%;
 
     &::before {
@@ -219,49 +254,153 @@
 
     &::after {
       content: '（税込み）';
-      font-size: 1.2rem;
+      font-size: 0.8rem;
     }
   }
 
   &__price-dd--quantity {
     width: 40%;
     text-align: right;
-    font-weight: 600;
+    font-weight: 500;
 
     &::after {
       content: '枚';
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: 400;
     }
   }
 
   &__price-description {
-    padding-bottom: 4.8rem;
+    padding-bottom: 2rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
 
     span {
       font-weight: 500;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 
   &__content-card-button--lg {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    text-align: center;
+    display: none;
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      // display: block;
+    }
   }
 
   &__button-area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 4.8rem;
+    padding-top: 3rem;
+    text-align: center;
 
     @include breakpoint(tablet) {
     }
     @include breakpoint(pc) {
-      display: none;
+      // display: none;
     }
   }
 }
+
+// #plan {
+//   padding: 70px 0;
+// }
+
+// #plan section {
+//   background: #fff;
+//   margin: 0 0 10px 0;
+// }
+
+// #plan section h3 {
+//   font-size: 0.9rem;
+//   margin: 0 0 10px 0;
+// }
+
+// #plan section p {
+//   font-size: 0.8rem;
+// }
+
+// #plan .menu-area {
+//   padding: 20px;
+//   box-shadow: 5px 0 10px #ccc;
+// }
+
+// #plan .menu-btn {
+//   text-align: center;
+//   margin: 50px 0 0 0;
+// }
+
+// // スライダー =================================
+// .slider {
+//   /*横幅94%で左右に余白を持たせて中央寄せ*/
+//   width: 94%;
+//   margin: 0 auto;
+// }
+
+// .slider img {
+//   width: 100%; /*スライダー内の画像を横幅100%に*/
+//   height: auto;
+// }
+
+// /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+// .slider .slick-slide {
+//   margin: 0 10px;
+// }
+
+// /*矢印の設定*/
+
+// /*戻る、次へ矢印の位置*/
+// .slick-prev,
+// .slick-next {
+//   position: absolute; /*絶対配置にする*/
+//   top: 42%;
+//   cursor: pointer; /*マウスカーソルを指マークに*/
+//   outline: none; /*クリックをしたら出てくる枠線を消す*/
+//   border-top: 2px solid #999; /*矢印の色*/
+//   border-right: 2px solid #999; /*矢印の色*/
+//   height: 15px;
+//   width: 15px;
+// }
+
+// .slick-prev {
+//   /*戻る矢印の位置と形状*/
+//   left: -1.5%;
+//   transform: rotate(-135deg);
+// }
+
+// .slick-next {
+//   /*次へ矢印の位置と形状*/
+//   right: -1.5%;
+//   transform: rotate(45deg);
+// }
+
+// /*ドットナビゲーションの設定*/
+
+// .slick-dots {
+//   text-align: center;
+//   margin: 20px 0 0 0;
+// }
+
+// .slick-dots li {
+//   display: inline-block;
+//   margin: 0 5px;
+// }
+
+// .slick-dots button {
+//   color: transparent;
+//   outline: none;
+//   width: 8px; /*ドットボタンのサイズ*/
+//   height: 8px; /*ドットボタンのサイズ*/
+//   display: block;
+//   border-radius: 50%;
+//   background: #ccc; /*ドットボタンの色*/
+// }
+
+// .slick-dots .slick-active button {
+//   background: #81a8b8; /*ドットボタンの現在地表示の色*/
+// }
