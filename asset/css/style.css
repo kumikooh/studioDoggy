@@ -1456,8 +1456,7 @@ body.appear #wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 120px;
-  background: url("../image/polaroid.webp");
+  padding-top: 140px;
 }
 
 #lead .lead-img {
@@ -1480,7 +1479,6 @@ body.appear #wrapper {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  background: url("../image/text-logo--lgray.svg") no-repeat center;
 }
 
 @media screen and (max-width: 1060px) {
@@ -1503,10 +1501,10 @@ body.appear #wrapper {
     width: 100%;
   }
   #lead .lead-img {
-    min-height: 380px;
+    min-height: 250px;
   }
   #lead .lead-area {
-    margin: 0 0 80px 0;
+    margin: 0 0 140px 0;
     min-height: 20em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1523,26 +1521,15 @@ body.appear #wrapper {
 }
 
 #lead .lead-area h2 {
-  width: 2%;
-  line-height: 2;
+  width: 28%;
+  line-height: 2.5;
   font-size: 1.4rem;
-  font-weight: 500;
 }
 
 #lead .lead-area p {
-  width: 46%;
+  width: 48%;
   padding: 50px 0 0 0;
-  line-height: 2;
-}
-
-#lead .lead-area .lead-btn {
-  width: 10%;
-  position: relative;
-  top: 240px;
-}
-
-#lead .btn04 {
-  padding: 20px 15px;
+  line-height: 2.8;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1550,7 +1537,7 @@ body.appear #wrapper {
     line-height: 2;
   }
   #lead .lead-area p {
-    line-height: 1.8;
+    line-height: 2.3;
   }
 }
 @media screen and (max-width: 768px) {
