@@ -1,0 +1,161 @@
+@use './foundation/variable' as *;
+
+/* lead
+--------------------------- */
+#lead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 120px;
+  background: url('../image/polaroid.webp');
+}
+
+#lead .lead-img {
+  width: 46%;
+  min-height: 400px;
+  background: url('../image/lead.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#lead .lead-area {
+  width: 52%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  background: url('../image/text-logo--lgray.svg') no-repeat center;
+}
+
+@media screen and (max-width: 1060px) {
+  #lead .lead-img {
+    width: 30%;
+  }
+  #lead .lead-area {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #lead {
+    flex-direction: column-reverse;
+  }
+
+  #lead .lead-img,
+  #lead .lead-area {
+    width: 100%;
+  }
+
+  #lead .lead-img {
+    min-height: 380px;
+  }
+
+  #lead .lead-area {
+    margin: 0 0 80px 0;
+    min-height: 20em;
+    justify-content: center;
+  }
+}
+
+#lead .lead-area h2,
+#lead .lead-area p,
+#lead .lead-area .lead-btn a {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+#lead .lead-area h2 {
+  width: 2%;
+  line-height: 2;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#lead .lead-area p {
+  width: 46%;
+  padding: 50px 0 0 0;
+  line-height: 2;
+}
+
+#lead .lead-area .lead-btn {
+  width: 10%;
+  position: relative;
+  top: 240px;
+}
+
+#lead .btn04 {
+  padding: 20px 15px;
+}
+
+@media screen and (max-width: 1300px) {
+  #lead .lead-area h2 {
+    line-height: 2;
+  }
+  #lead .lead-area p {
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #lead .lead-area .lead-btn {
+    width: 100%;
+    top: 50px;
+    text-align: center;
+  }
+
+  .btn04 {
+    width: 250px;
+  }
+
+  #lead .lead-area h2,
+  #lead .lead-area p {
+    width: auto;
+  }
+
+  #lead .lead-area h2 {
+    margin: 0 0 0 20px;
+    line-height: 2.2;
+  }
+
+  #lead .lead-area p {
+    line-height: 2;
+  }
+
+  #lead .lead-area .lead-btn a {
+    -ms-writing-mode: lr-tb;
+    -webkit-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+  }
+
+  #lead .btn04 {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  #lead .lead-area h2 {
+    line-height: 1.8;
+  }
+  #lead .lead-area p {
+    height: 23em;
+  }
+
+  _:-ms-lang(x)::-ms-backdrop,
+  #lead .lead-area p {
+    width: 8em;
+  }
+
+  #lead .lead-area p br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #lead .lead-area h2 {
+    line-height: 1.6;
+  }
+  #lead .lead-area p {
+    line-height: 1.8;
+  }
+}

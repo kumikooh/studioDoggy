@@ -3,61 +3,94 @@
 /* section
 --------------------------- */
 .c-section {
-  padding-top: 3.2rem;
-
-  @include breakpoint(tablet) {
-    padding-top: 6.4rem;
-  }
-  // @include breakpoint(pc) {
-  // }
-
   &__header-box {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    margin-bottom: 3.2rem;
-    @include breakpoint(tablet) {
-      margin-bottom: 6.4rem;
-    }
-    // @include breakpoint(pc) {
-    // }
-  }
-
-  &__header-box--plan {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    margin-bottom: 6.4rem;
+    color: #4c8aa4;
+    padding-top: 80px;
   }
 
   &__header {
-    color: $color-gray-500;
     font-weight: 600;
     font-size: 2.2rem;
-    letter-spacing: 0.4rem;
+  }
 
-    @include breakpoint(tablet) {
-      font-size: 2.4rem;
-    }
-    @include breakpoint(pc) {
-      font-size: 4rem;
-    }
+  &__header::after {
+    content: ' /';
   }
 
   &__header--sub {
-    color: $color-gray-500;
-    // font-family: sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
-    padding-left: 0.8rem;
+    padding-left: 0;
+  }
 
-    @include breakpoint(tablet) {
+  @media screen and (max-width: 450px) {
+    .c-section__header {
       font-size: 1.6rem;
     }
-    @include breakpoint(pc) {
-      font-size: 2rem;
+
+    .c-section__header--sub {
+      font-size: 1rem;
     }
   }
+  // padding-top: 3.2rem;
+
+  // @include breakpoint(tablet) {
+  //   padding-top: 6.4rem;
+  // }
+  // // @include breakpoint(pc) {
+  // // }
+
+  // &__header-box {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: baseline;
+  //   margin-bottom: 3.2rem;
+  //   @include breakpoint(tablet) {
+  //     margin-bottom: 6.4rem;
+  //   }
+  //   // @include breakpoint(pc) {
+  //   // }
+  // }
+
+  // &__header-box--plan {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: baseline;
+  //   margin-bottom: 6.4rem;
+  // }
+
+  // &__header {
+  //   color: $color-gray-500;
+  //   font-weight: 600;
+  //   font-size: 2.2rem;
+  //   letter-spacing: 0.4rem;
+
+  //   @include breakpoint(tablet) {
+  //     font-size: 2.4rem;
+  //     letter-spacing: 0.2rem;
+  //   }
+  //   @include breakpoint(pc) {
+  //     font-size: 4rem;
+  //   }
+  // }
+
+  // &__header--sub {
+  //   color: $color-gray-500;
+  //   // font-family: sans-serif;
+  //   font-weight: 400;
+  //   font-size: 1.4rem;
+  //   padding-left: 0.8rem;
+
+  //   @include breakpoint(tablet) {
+  //     font-size: 1.6rem;
+  //   }
+  //   @include breakpoint(pc) {
+  //     font-size: 2rem;
+  //   }
+  // }
 
   &__catch {
     color: $color-main-300;

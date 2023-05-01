@@ -2,160 +2,74 @@
 
 /* about
 --------------------------- */
-
-.p-about {
+.about {
+  padding: 70px 0;
   height: auto;
   width: auto;
-  background-image: url(../image/polaroid.webp);
-  background-repeat: repeat;
+  background: url(../image/polaroid.webp);
 
-  &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  section {
+    margin: 0 0 10px 0;
+  }
 
+  section h3 {
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+  }
+
+  section p {
+    font-size: 0.8rem;
+  }
+
+  .menu-area {
+    padding: 20px;
+    box-shadow: 5px 0 10px #ccc;
+  }
+
+  .menu-btn {
+    text-align: center;
+    margin: 50px 0 0 0;
+  }
+}
+
+.about {
+  &__studio-introduction {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 4rem;
+  }
+
+  &__studio-description {
+    // margin-bottom: 16px;
+    font-size: 0.8rem;
     @include breakpoint(tablet) {
+      font-size: 0.9rem;
     }
     @include breakpoint(pc) {
-      display: block;
+      font-size: 1rem;
     }
-
-    .logo-text {
-      @include breakpoint(tablet) {
-      }
-      @include breakpoint(pc) {
-        display: none;
-      }
-    }
-
-    .logo-text-lg {
+    br {
       display: none;
       @include breakpoint(tablet) {
-      }
-      @include breakpoint(pc) {
         display: block;
       }
     }
-  }
 
-  &__content {
+    span {
+      display: inline-block;
+      // @include breakpoint(tablet) {
+      //   display: inline-block;
+      // }
+    }
+  }
+  &__studio-text {
+    margin-bottom: 16px;
+    font-size: 0.8rem;
     @include breakpoint(tablet) {
-      display: flex;
-      flex-direction: row;
-      padding-left: 4rem;
+      font-size: 0.9rem;
     }
     @include breakpoint(pc) {
-      padding-left: 8rem;
-    }
-  }
-
-  &__content-main {
-    width: 100%;
-  }
-
-  &__content-description {
-    @include breakpoint(tablet) {
-      display: flex;
-      flex-direction: column;
-      padding: 0 6rem 0 2rem;
-    }
-    @include breakpoint(pc) {
-      padding-left: 6.4rem;
-    }
-  }
-
-  &__studio {
-    padding-bottom: 8rem;
-    h3 {
-      font-size: 30px;
-      font-size: 3rem;
-      position: relative;
-      padding: 1.5rem;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 0.4rem;
-      margin-bottom: 2.4rem;
-
-      span {
-        font-size: 18px;
-        font-size: 1.8rem;
-        display: block;
-        letter-spacing: 0;
-        font-weight: 400;
-      }
-    }
-    h3:before {
-      position: absolute;
-      bottom: 5px;
-      left: calc(50% - 30px);
-      width: 60px;
-      height: 3px;
-      content: '';
-      // border-radius: 3px;
-      background: $color-gray-500;
-    }
-
-    .gallery {
-      columns: 1; /*段組みの数*/
-
-      @include breakpoint(tablet) {
-        columns: 2;
-      }
-      @include breakpoint(pc) {
-        columns: 3;
-      }
-    }
-
-    .gallery li {
-      margin-bottom: 16px; /*各画像下に余白をつける*/
-    }
-
-    /*ギャラリー内のイメージは横幅100%にする*/
-    .gallery img {
-      width: 100%;
-      height: auto;
-      vertical-align: bottom; /*画像の下にできる余白を削除*/
-    }
-
-    /*========= レイアウトのためのCSS ===============*/
-
-    a {
-      color: #333;
-    }
-
-    a:hover,
-    a:active {
-      text-decoration: none;
-    }
-
-    /*画像を出現させるアニメーションCSS*/
-
-    .flipLeft {
-      animation: none;
-      transform: none;
-      transition: unset;
-
-      @include breakpoint(tablet) {
-      }
-      @include breakpoint(pc) {
-        animation-name: flipLeft;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        perspective-origin: left center;
-        opacity: 0;
-      }
-    }
-
-    @keyframes flipLeft {
-      from {
-        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
-        opacity: 0;
-      }
-
-      to {
-        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
-        opacity: 1;
-      }
+      font-size: 1rem;
     }
   }
 
@@ -163,34 +77,49 @@
     // margin-bottom: 16px;
 
     &.gallery {
-      columns: 1; /*段組みの数*/
-      @include breakpoint(tablet) {
-        columns: 2;
-      }
-      @include breakpoint(pc) {
-        columns: 2;
-      }
+      columns: 2; /*段組みの数*/
     }
   }
+}
 
-  &__studio-introduction {
+.about__studio--french-shabby,
+.about__studio--american-vintage {
+  h3 {
+    font-size: 30px;
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
     margin-bottom: 2.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    p {
-      text-align: center;
-      max-width: 960px;
+
+    span {
+      font-size: 18px;
+      display: block;
+      letter-spacing: 0;
+      font-weight: 400;
     }
   }
-
-  // &__studio--french-shabby,
-  &__studio--american-vintage {
-    margin-bottom: 8rem;
+  h3:before {
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 2px;
+    content: '';
+    background: $color-gray-500;
   }
+}
 
-  &__studio-text {
-    margin-bottom: 16px;
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+  .about__studio-image-box.gallery {
+    columns: 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about__studio-image-box.gallery.gallery {
+    columns: 1;
   }
 }

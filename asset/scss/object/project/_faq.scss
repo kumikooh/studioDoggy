@@ -1,7 +1,8 @@
-@use "../../foundation/variable" as *;
+@use '../../foundation/variable' as *;
 
 /* faq
 --------------------------- */
 .p-faq {
-  background-image: url(../image/seamless_paper_texture.webp);
+  // background: url('../image/seamless_paper_texture.webp');
+  background: url('../image/halftone.png');
 }
