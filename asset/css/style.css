@@ -1457,6 +1457,7 @@ body.appear #wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 140px;
+  background: url("../image/polaroid.webp");
 }
 
 #lead .lead-img {
