@@ -1753,7 +1753,6 @@ body.appear #wrapper {
 .plan-text {
   text-align: center;
   margin: 0 auto 4rem;
-  font-size: 0.8rem;
   width: 80%;
 }
 
@@ -1857,7 +1856,6 @@ body.appear #wrapper {
       flex-wrap: wrap;
   width: 100%;
   margin-bottom: 1rem;
-  line-height: 1;
 }
 .p-plan__price-dt {
   padding-left: 10%;
@@ -1865,7 +1863,6 @@ body.appear #wrapper {
 }
 .p-plan__price-dt--stamp {
   font-size: 1rem;
-  line-height: 1;
   width: 100%;
   padding: 0 9%;
 }
@@ -2371,3 +2368,4 @@ body.appear #wrapper {
 .u-mb62 {
   margin-bottom: 6.2rem;
 }
+/*# sourceMappingURL=style.css.map */
