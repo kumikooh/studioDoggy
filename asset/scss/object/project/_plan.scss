@@ -1,7 +1,7 @@
 @use '../../foundation/variable' as *;
 
-/* plan
---------------------------- */
+//* plan
+//--------------------------- */
 .plan-text {
   text-align: center;
   margin: 0 auto 4rem;
@@ -21,45 +21,26 @@
 }
 
 .p-plan {
+  // &__content--studio,
+  // &__content--stamp {
+  //   @include breakpoint(pc) {
+  //     // position: relative;
+  //     // width: 100%;
+  //     // margin: 0 auto;
+  //     // background: url('../image/halftone.png');
+  //   }
+  // }
+
   &__content--studio,
-  &__content--stamp {
+  &__content--location,
+  &__content--stamp{
+    padding-botton: 8rem;
     @include breakpoint(pc) {
-      // position: relative;
-      // width: 100%;
-      // margin: 0 auto;
-      // background: url('../image/halftone.png');
-    }
-  }
-
-  &__content--studio {
-    @include breakpoint(pc) {
-      // height: 664px;
       padding: 0;
     }
   }
 
-  &__content--location {
-    // background: url('../image/seamless_paper_texture.webp');
-    // padding-top: 6.4rem;
-    padding: 8rem 0;
 
-    @include breakpoint(pc) {
-      // height: 744px;
-      // position: relative;
-      // margin: 0 auto;
-      padding: 0;
-    }
-  }
-
-  &__content--stamp {
-    // padding-top: 6.4rem;
-    padding: 0 0 8rem;
-
-    @include breakpoint(pc) {
-      // height: 840px;
-      padding: 0;
-    }
-  }
 
   &__images {
     padding-bottom: 1rem;
