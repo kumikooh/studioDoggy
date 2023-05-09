@@ -584,9 +584,10 @@ h2 {
   display: inline-block;
   color: #585858;
   padding: 10px 20px;
-  background: #eee;
+  background: transparent;
   text-decoration: none;
   outline: none;
+  border: 1px solid #bababa;
   transition: all 0.3s;
   transition-delay: 0.7s;
   width: 250px;
@@ -594,6 +595,7 @@ h2 {
 
 .btn:hover {
   background: #81a8b8;
+  border: 1px solid #81a8b8;
   color: #fff;
 }
 
@@ -1379,8 +1381,16 @@ body.appear #wrapper {
 }
 .plan-text {
   text-align: center;
-  margin: 0 auto 4rem;
+  margin: auto;
   width: 80%;
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
+}
+@media (min-width: 1100px) {
+  .plan-text {
+    font-size: 1rem;
+    padding: 2rem;
+  }
 }
 
 .plan {
@@ -1393,9 +1403,6 @@ body.appear #wrapper {
   }
 }
 
-.p-plan__content--studio, .p-plan__content--location, .p-plan__content--stamp {
-  padding-botton: 8rem;
-}
 @media (min-width: 1100px) {
   .p-plan__content--studio, .p-plan__content--location, .p-plan__content--stamp {
     padding: 0;
@@ -1403,6 +1410,11 @@ body.appear #wrapper {
 }
 .p-plan__images {
   padding-bottom: 1rem;
+}
+@media (min-width: 1100px) {
+  .p-plan__images {
+    margin-bottom: 2rem;
+  }
 }
 @media (min-width: 520px) {
   .p-plan__content-img {
@@ -1436,11 +1448,11 @@ body.appear #wrapper {
   margin: 0 auto;
   background-color: #fff9eb;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
-  padding: 1.25rem 1rem;
+  padding: 3rem 2rem;
 }
-@media (min-width: 520px) {
+@media (min-width: 1100px) {
   .p-plan__content-card {
-    width: 85%;
+    width: 32%;
   }
 }
 .p-plan__content-title {
@@ -1458,6 +1470,11 @@ body.appear #wrapper {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 1100px) {
+  .p-plan__content-description {
+    margin-bottom: 4rem;
+  }
 }
 .p-plan__price {
   display: flex;
@@ -1909,12 +1926,16 @@ body.appear #wrapper {
   margin-bottom: 0;
 }
 
+.u-mb8 {
+  margin-bottom: 0.5rem;
+}
+
 .u-mb16 {
   margin-bottom: 1rem;
 }
 
-.u-mb8 {
-  margin-bottom: 0.5rem;
+.u-mb32 {
+  margin-bottom: 32px;
 }
 
 .u-mb62 {
