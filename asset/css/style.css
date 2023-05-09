@@ -579,6 +579,8 @@ h2 {
     font-size: 1rem;
   }
 }
+/* button
+--------------------------- */
 .btn {
   position: relative;
   display: inline-block;
@@ -739,6 +741,54 @@ h2 {
   }
   to {
     opacity: 1;
+  }
+}
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.zoomIn {
+  animation-name: zoomInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomInAnime {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
   }
 }
 .zoomOut {
@@ -1178,6 +1228,11 @@ body.appear #wrapper {
   padding: 50px 0 0 0;
   line-height: 2.8;
 }
+@media (min-width: 520px) {
+  #lead .lead-area p span {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 1300px) {
   #lead .lead-area h2 {
@@ -1219,7 +1274,10 @@ body.appear #wrapper {
     line-height: 1.8;
   }
   #lead .lead-area p {
-    height: 23em;
+    height: 27em;
+  }
+  #lead .lead-area p .u-mw470 {
+    display: block;
   }
   _:-ms-lang(x)::-ms-backdrop,
 #lead .lead-area p {
@@ -1270,12 +1328,7 @@ body.appear #wrapper {
   margin: 0 auto 4rem;
 }
 .about__studio-description {
-  font-size: 0.8rem;
-}
-@media (min-width: 520px) {
-  .about__studio-description {
-    font-size: 0.9rem;
-  }
+  font-size: 0.9rem;
 }
 @media (min-width: 1100px) {
   .about__studio-description {
@@ -1547,6 +1600,11 @@ body.appear #wrapper {
   width: 98%;
   margin: 0 auto;
 }
+@media (min-width: 520px) {
+  .p-voice__container {
+    width: 70%;
+  }
+}
 .p-voice__card {
   position: relative;
   width: 100%;
@@ -1582,8 +1640,7 @@ body.appear #wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.8rem;
+  padding: 2rem;
   line-height: normal;
 }
 .p-voice__card--back a {
@@ -1609,7 +1666,6 @@ body.appear #wrapper {
   padding-top: 0;
   margin-bottom: 2.4rem;
   line-height: normal;
-  font-size: 0.7rem;
 }
 
 .flipped .p-voice__card--front {
@@ -1940,5 +1996,9 @@ body.appear #wrapper {
 
 .u-mb62 {
   margin-bottom: 3.87rem;
+}
+
+.u-mw470 {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

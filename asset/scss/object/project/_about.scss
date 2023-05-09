@@ -40,11 +40,7 @@
   }
 
   &__studio-description {
-    // margin-bottom: 16px;
-    font-size: 0.8rem;
-    @include breakpoint(tablet) {
-      font-size: 0.9rem;
-    }
+    font-size: 0.9rem;
     @include breakpoint(pc) {
       font-size: 1rem;
     }

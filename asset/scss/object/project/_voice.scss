@@ -15,9 +15,10 @@
     margin: 0 auto;
 
     @include breakpoint(tablet) {
+      width: 70%;
     }
     @include breakpoint(pc) {
-      // width: 70%;
+      // width: 88%;
     }
   }
 
@@ -61,8 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 2rem;
     line-height: normal;
 
     a {
@@ -92,7 +92,6 @@
     padding-top: 0;
     margin-bottom: 2.4rem;
     line-height: normal;
-    font-size: 0.7rem;
   }
 }
 
