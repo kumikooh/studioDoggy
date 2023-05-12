@@ -1,12 +1,17 @@
 @use '../../foundation/variable' as *;
 
-/* plan
---------------------------- */
+//* plan
+//--------------------------- */
 .plan-text {
   text-align: center;
-  margin: 0 auto 4rem;
-  font-size: 0.8rem;
+  margin: auto;
   width: 80%;
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
+  @include breakpoint(pc) {
+    font-size: 1rem;
+    padding: 2rem;
+  }
 }
 
 .plan {
@@ -14,8 +19,6 @@
 }
 
 .plan-content-wrapper {
-  @include breakpoint(tablet) {
-  }
   @include breakpoint(pc) {
     display: flex;
   }
@@ -23,62 +26,19 @@
 
 .p-plan {
   &__content--studio,
+  &__content--location,
   &__content--stamp {
+    // padding-botton: 8rem;
     @include breakpoint(pc) {
-      // position: relative;
-      // width: 100%;
-      // margin: 0 auto;
-      // background: url('../image/halftone.png');
-    }
-  }
-
-  &__content--studio {
-    @include breakpoint(pc) {
-      // height: 664px;
-      padding: 0;
-    }
-  }
-
-  &__content--location {
-    // background: url('../image/seamless_paper_texture.webp');
-    // padding-top: 6.4rem;
-    padding: 8rem 0;
-
-    @include breakpoint(pc) {
-      // height: 744px;
-      // position: relative;
-      // margin: 0 auto;
-      padding: 0;
-    }
-  }
-
-  &__content--stamp {
-    // padding-top: 6.4rem;
-    padding: 0 0 8rem;
-
-    @include breakpoint(pc) {
-      // height: 840px;
       padding: 0;
     }
   }
 
   &__images {
     padding-bottom: 1rem;
-    @include breakpoint(pc) {
-      // position: absolute;
-      // z-index: 10;
-      // padding-left: 3rem;
-    }
 
-    &.second-right,
-    &__content-img {
-      @include breakpoint(pc) {
-        // position: absolute;
-        // top: 40%;
-        // left: 550px;
-        // width: 64%;
-        // transform: translateY(-50%);
-      }
+    @include breakpoint(pc) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -124,24 +84,13 @@
 
   &__content-card {
     width: 98%;
-    // padding-top: 1.25rem;
     margin: 0 auto;
     background-color: #fff9eb;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
-    padding: 1.25rem 1rem;
+    padding: 3rem 2rem;
 
-    @include breakpoint(tablet) {
-      width: 85%;
-      // padding: 1.25rem 1rem;
-    }
     @include breakpoint(pc) {
-      // display: flex;
-      // justify-content: space-between;
-      // flex-direction: row-reverse;
-      // padding-left: 3%;
-      // padding-right: 3.2%;
-      // padding-top: 2rem;
-      // padding: 44px 24px 0 24px;
+      width: 32%;
     }
 
     &.first-right,
@@ -216,9 +165,9 @@
     font-size: 1rem;
     margin-bottom: 1.5rem;
 
-    // @include breakpoint(pc) {
-    //   font-size: 1.8rem;
-    // }
+    @include breakpoint(pc) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__price {
@@ -226,7 +175,6 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 1rem;
-    line-height: 1;
   }
 
   &__price-dt {
@@ -236,7 +184,6 @@
 
   &__price-dt--stamp {
     font-size: 1rem;
-    line-height: 1;
     width: 100%;
     padding: 0 9%;
   }
@@ -305,102 +252,3 @@
     }
   }
 }
-
-// #plan {
-//   padding: 70px 0;
-// }
-
-// #plan section {
-//   background: #fff;
-//   margin: 0 0 10px 0;
-// }
-
-// #plan section h3 {
-//   font-size: 0.9rem;
-//   margin: 0 0 10px 0;
-// }
-
-// #plan section p {
-//   font-size: 0.8rem;
-// }
-
-// #plan .menu-area {
-//   padding: 20px;
-//   box-shadow: 5px 0 10px #ccc;
-// }
-
-// #plan .menu-btn {
-//   text-align: center;
-//   margin: 50px 0 0 0;
-// }
-
-// // スライダー =================================
-// .slider {
-//   /*横幅94%で左右に余白を持たせて中央寄せ*/
-//   width: 94%;
-//   margin: 0 auto;
-// }
-
-// .slider img {
-//   width: 100%; /*スライダー内の画像を横幅100%に*/
-//   height: auto;
-// }
-
-// /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
-
-// .slider .slick-slide {
-//   margin: 0 10px;
-// }
-
-// /*矢印の設定*/
-
-// /*戻る、次へ矢印の位置*/
-// .slick-prev,
-// .slick-next {
-//   position: absolute; /*絶対配置にする*/
-//   top: 42%;
-//   cursor: pointer; /*マウスカーソルを指マークに*/
-//   outline: none; /*クリックをしたら出てくる枠線を消す*/
-//   border-top: 2px solid #999; /*矢印の色*/
-//   border-right: 2px solid #999; /*矢印の色*/
-//   height: 15px;
-//   width: 15px;
-// }
-
-// .slick-prev {
-//   /*戻る矢印の位置と形状*/
-//   left: -1.5%;
-//   transform: rotate(-135deg);
-// }
-
-// .slick-next {
-//   /*次へ矢印の位置と形状*/
-//   right: -1.5%;
-//   transform: rotate(45deg);
-// }
-
-// /*ドットナビゲーションの設定*/
-
-// .slick-dots {
-//   text-align: center;
-//   margin: 20px 0 0 0;
-// }
-
-// .slick-dots li {
-//   display: inline-block;
-//   margin: 0 5px;
-// }
-
-// .slick-dots button {
-//   color: transparent;
-//   outline: none;
-//   width: 8px; /*ドットボタンのサイズ*/
-//   height: 8px; /*ドットボタンのサイズ*/
-//   display: block;
-//   border-radius: 50%;
-//   background: #ccc; /*ドットボタンの色*/
-// }
-
-// .slick-dots .slick-active button {
-//   background: #81a8b8; /*ドットボタンの現在地表示の色*/
-// }

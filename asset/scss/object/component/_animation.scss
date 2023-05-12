@@ -20,7 +20,66 @@
     opacity: 1;
   }
 }
+
+// 下から
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 左から
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 //  ボンッ =======================================
+
+.zoomIn {
+  animation-name: zoomInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomInAnime {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+//  ヒュッ =======================================
 
 .zoomOut {
   animation-name: zoomOutAnime;

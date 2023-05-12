@@ -74,6 +74,11 @@
   width: 48%;
   padding: 50px 0 0 0;
   line-height: 2.8;
+  span {
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
 }
 
 // #lead .lead-area .lead-btn {
@@ -136,7 +141,11 @@
     line-height: 1.8;
   }
   #lead .lead-area p {
-    height: 23em;
+    height: 27em;
+
+    .u-mw470 {
+      display: block;
+    }
   }
 
   _:-ms-lang(x)::-ms-backdrop,

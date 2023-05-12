@@ -2,117 +2,101 @@
 
 /* button
 --------------------------- */
-/* ボタン共通設定 */
-.btn04 {
-  /*線の基点とするためrelativeを指定*/
+//* ボタン共通設定 */
+
+.btn {
+  //*線の基点とするためrelativeを指定*/
   position: relative;
-  /*ボタンの形状*/
+  //*ボタンの形状*/
   display: inline-block;
-  padding: 10px 30px;
-  color: #333;
-  border: 1px solid #ccc;
+  color: $color-text;
+  padding: 10px 20px;
+  background: transparent;
   text-decoration: none;
   outline: none;
-  /*はみ出す背景色を隠す*/
-  overflow: hidden;
+  border: 1px solid $color-gray-300;
+  //*アニメーションの指定*/
+  transition: all 0.3s;
+  transition-delay: 0.7s; //*0.7秒遅れてアニメーション*/
+  width: 250px;
 }
 
-/*hoverした際のボタンの形状*/
-.btn04:hover {
+//*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn:hover {
+  background: $color-main;
+  border: 1px solid $color-main;
   color: #fff;
-  border-color: transparent;
-  /*色の変化を遅らせる*/
-  transition-delay: 0.6s;
 }
 
-/*線の設定*/
-.btn04 span {
+//*線の設定*/
+.btn span {
   display: block;
-  z-index: 2;
 }
 
-/*== 線から塗に変化（上から下） */
-
-/*線の設定*/
-.bordertop span::before,
-.bordertop span::after {
+//*横線の設定*/
+.btn::before,
+.btn::after {
   content: '';
-  /*絶対配置で線の位置を決める*/
+  //*絶対配置で線の位置を決める*/
   position: absolute;
+  //*線の形状*/
+  width: 0;
+  height: 1px;
+  background: $color-main;
+  //*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+//*縦線の設定*/
+.btn span::before,
+.btn span::after {
+  content: '';
+  //*絶対配置で線の位置を決める*/
+  position: absolute;
+  //*線の形状*/
   width: 1px;
   height: 0;
-  /*線の形状*/
-  background: #81a8b8;
-  /*アニメーションの設定*/
-  transition: all 0.3s;
+  background: $color-main;
+  //*アニメーションの指定*/
+  transition: all 0.2s linear;
 }
 
-/*左線*/
-.bordertop span::before {
-  left: 0;
-  top: 0;
-}
-
-/*右線*/
-.bordertop span::after {
-  right: 0;
-  top: 0;
-}
-
-/*hoverをすると線が伸びる*/
-.bordertop:hover span::before,
-.bordertop:hover span::after {
-  height: 100%;
-}
-
-/*背景の設定*/
-.bordertop::before {
-  content: '';
-  /*絶対配置で線の位置を決める*/
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  /*背景の形状*/
+//*hoverした際、線が縦横100%伸びる*/
+.btn:hover::before,
+.btn:hover::after {
   width: 100%;
-  height: 0;
-  background: #81a8b8;
-  /*アニメーションの設定*/
-  transition: all 0.3s;
 }
-
-/*hoverをすると背景が伸びる*/
-.bordertop:hover::before {
+.btn:hover span::before,
+.btn:hover span::after {
   height: 100%;
-  /*0.4秒遅れてアニメーション*/
-  transition-delay: 0.4s;
 }
 
-// ------------------------------------
-// もとの
-// ------------------------------------
-// .c-button {
-// &__reserve {
-//   border: $color-gray-500 1px solid;
-//   padding: 1.6rem 5.6rem;
-//   margin-bottom: 4.8rem;
-// }
+//*== 左上と右下から枠線が伸びて塗りに */
 
-// &__reserve--pc {
-// border: $color-gray-500 1px solid;
-// padding: 0.8rem 3rem;
-// display: none;
-// font-size: 1rem;
+//*右下から右上へ伸びる横線*/
+.bordercircle::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
 
-// @include breakpoint(tablet) {
-// }
-// @include breakpoint(pc) {
-// display: block;
-//   }
-// }
+//*右下から右上へ伸びる縦線*/
+.bordercircle span::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
 
-// &__line {
-//   border: $color-gray-500 1px solid;
-//   padding: 1.6rem 1.4rem;
-// }
-// }
+//*左上から右上へ伸びる横線*/
+.bordercircle::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+//*左上から左下へ伸びる横線*/
+.bordercircle span::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
