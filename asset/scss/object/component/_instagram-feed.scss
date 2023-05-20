@@ -1,0 +1,35 @@
+@use './foundation/variable' as *;
+
+/* insta-feed
+--------------------------- */
+
+.lightwidget {
+  font-family: 'Zen Kaku Gothic New', 'Sawarabi Gothic', sans-serif !important;
+}
+
+.insta-feed {
+  &__wrapper {
+    padding-top: 4rem;
+  }
+  &__message {
+    padding: 4rem 0;
+    img {
+      width: 40%;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+      @include breakpoint(tablet) {
+        width: 20%;
+      }
+      @include breakpoint(pc) {
+        width: 10%;
+      }
+      @include breakpoint(pc-w) {
+      }
+    }
+
+    span {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}

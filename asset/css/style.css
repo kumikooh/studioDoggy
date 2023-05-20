@@ -917,6 +917,38 @@ h2 {
   padding: 0;
 }
 
+/* insta-feed
+--------------------------- */
+.lightwidget {
+  font-family: "Zen Kaku Gothic New", "Sawarabi Gothic", sans-serif !important;
+}
+
+.insta-feed__wrapper {
+  padding-top: 4rem;
+}
+.insta-feed__message {
+  padding: 4rem 0;
+}
+.insta-feed__message img {
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+@media (min-width: 520px) {
+  .insta-feed__message img {
+    width: 20%;
+  }
+}
+@media (min-width: 1100px) {
+  .insta-feed__message img {
+    width: 10%;
+  }
+}
+.insta-feed__message span {
+  font-size: 16px;
+  text-align: center;
+}
+
 /* splash
 --------------------------- */
 #splash-logo p {
