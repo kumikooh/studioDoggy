@@ -1792,6 +1792,12 @@ body.appear #wrapper {
 .p-faq {
   background: url("../image/halftone.png");
 }
+.p-faq .contact-btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
 
 /* access
 --------------------------- */
@@ -2050,5 +2056,9 @@ body.appear #wrapper {
 
 .u-mw470 {
   display: none;
+}
+
+.u-m0auto {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
