@@ -1756,6 +1756,11 @@ body.appear #wrapper {
   background: url("../image/brky-001.jpg") no-repeat center;
   background-size: cover;
 }
+@media (min-width: 1600px) {
+  #contact .contact-img {
+    min-height: 500px;
+  }
+}
 
 #contact .contact-area {
   width: 25%;

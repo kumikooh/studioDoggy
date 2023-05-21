@@ -17,6 +17,13 @@
   min-height: 300px;
   background: url('../image/brky-001.jpg') no-repeat center;
   background-size: cover;
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(pc) {
+  }
+  @include breakpoint(pc-w) {
+    min-height: 500px;
+  }
 }
 
 #contact .contact-area {
