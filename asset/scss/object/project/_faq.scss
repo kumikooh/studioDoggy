@@ -5,4 +5,11 @@
 .p-faq {
   // background: url('../image/seamless_paper_texture.webp');
   background: url('../image/halftone.png');
+
+  .contact-btn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
 }

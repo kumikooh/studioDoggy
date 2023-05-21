@@ -9,16 +9,16 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
     grid-gap: 16px;
     width: 98%;
     margin: 0 auto;
 
     @include breakpoint(tablet) {
-      width: 70%;
+      width: 100%;
     }
-    @include breakpoint(pc) {
-      // width: 88%;
+    @include breakpoint(pc-w) {
+      width: 60%;
     }
   }
 
@@ -68,6 +68,15 @@
     a {
       text-decoration: none;
       color: $color-gray-100;
+      font-size: 1rem;
+      @include breakpoint(tablet) {
+        font-size: 0.9rem;
+      }
+      @include breakpoint(pc) {
+      }
+      @include breakpoint(pc-w) {
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -92,6 +101,7 @@
     padding-top: 0;
     margin-bottom: 2.4rem;
     line-height: normal;
+    font-size: 0.9rem;
   }
 }
 
