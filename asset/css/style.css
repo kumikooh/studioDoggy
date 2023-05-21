@@ -1655,7 +1655,8 @@ body.appear #wrapper {
 }
 @media (min-width: 1600px) {
   .p-voice__container {
-    width: 60%;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 .p-voice__card {
@@ -1708,7 +1709,7 @@ body.appear #wrapper {
 }
 @media (min-width: 1600px) {
   .p-voice__card--back a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 .p-voice__card--image {

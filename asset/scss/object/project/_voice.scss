@@ -18,7 +18,8 @@
       width: 100%;
     }
     @include breakpoint(pc-w) {
-      width: 60%;
+      width: 80%;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
 
@@ -75,7 +76,7 @@
       @include breakpoint(pc) {
       }
       @include breakpoint(pc-w) {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
