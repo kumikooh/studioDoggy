@@ -1663,7 +1663,7 @@ body.appear #wrapper {
   width: 100%;
   perspective: 1000px;
   border-radius: 4px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 .p-voice__card::before {
   content: "";
