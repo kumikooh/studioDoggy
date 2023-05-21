@@ -44,14 +44,14 @@
 
   &__content-img {
     @include breakpoint(tablet) {
-      width: 616px;
-      height: 424px;
+      // width: 616px;
+      // height: 424px;
       // width: 75%;
       // margin: auto;
-      display: none;
+      // display: none;
     }
     @include breakpoint(pc) {
-      // margin: 0;
+      margin: 0 auto;
       // width: 60%;
     }
   }
