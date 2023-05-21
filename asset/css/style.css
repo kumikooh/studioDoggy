@@ -1655,7 +1655,8 @@ body.appear #wrapper {
 }
 @media (min-width: 1600px) {
   .p-voice__container {
-    width: 60%;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 .p-voice__card {
@@ -1663,7 +1664,7 @@ body.appear #wrapper {
   width: 100%;
   perspective: 1000px;
   border-radius: 4px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 .p-voice__card::before {
   content: "";
@@ -1708,7 +1709,7 @@ body.appear #wrapper {
 }
 @media (min-width: 1600px) {
   .p-voice__card--back a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 .p-voice__card--image {
@@ -1725,7 +1726,7 @@ body.appear #wrapper {
 }
 .p-voice__description {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-top: 0;
   margin-bottom: 2.4rem;
@@ -1755,6 +1756,11 @@ body.appear #wrapper {
   min-height: 300px;
   background: url("../image/brky-001.jpg") no-repeat center;
   background-size: cover;
+}
+@media (min-width: 1600px) {
+  #contact .contact-img {
+    min-height: 500px;
+  }
 }
 
 #contact .contact-area {

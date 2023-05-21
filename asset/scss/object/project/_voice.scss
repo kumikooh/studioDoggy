@@ -18,7 +18,8 @@
       width: 100%;
     }
     @include breakpoint(pc-w) {
-      width: 60%;
+      width: 80%;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
 
@@ -28,7 +29,7 @@
     -webkit-perspective: 1000px;
     perspective: 1000px;
     border-radius: 4px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.2rem;
     // display: block;
   }
   &__card::before {
@@ -75,7 +76,7 @@
       @include breakpoint(pc) {
       }
       @include breakpoint(pc-w) {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
@@ -96,7 +97,7 @@
 
   &__description {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-top: 0;
     margin-bottom: 2.4rem;
