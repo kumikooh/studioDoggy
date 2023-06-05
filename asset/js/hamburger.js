@@ -1,3 +1,1 @@
-$(".p-openbtn").click(function () {
-  $(this).toggleClass("active");
-});
+$(".p-openbtn").click(function(){$(this).toggleClass("active")})
