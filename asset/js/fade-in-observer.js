@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth < 768) return; // モバイル除外
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -13,6 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll(".fade-in-trigger").forEach(el => {
+    const isAboutSection = el.closest("#about");
+    const isMobile = window.innerWidth < 768;
+
+    if (isAboutSection && isMobile) {
+      // スマホで #about セクション内ならスキップ
+      return;
+    }
+
     observer.observe(el);
   });
 });

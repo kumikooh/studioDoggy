@@ -249,17 +249,20 @@ function fadeAnime() {
   });
 
   // パタっ --------------------------
-  // flipLeft
-  $('.flipTrigger').each(function () {
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('flipLeft');
-    } else {
-      $(this).removeClass('flipLeft');
-    }
-  });
+  // flipLeft ※PCのみ実行
+  if (window.innerWidth >= 768) {
+    $('.flipTrigger').each(function () {
+      var elemPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('flipLeft');
+      } else {
+        $(this).removeClass('flipLeft');
+      }
+    });
+}
+
 }
 
 /*===========================================================*/
@@ -380,3 +383,23 @@ $(window).on('load', function () {
   });
   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 }); // ここまでページが読み込まれたらすぐに動かしたい場合の記述
+
+// IntersectionObserver
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 768) return; // モバイル除外
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll(".fade-in-trigger").forEach(el => {
+    observer.observe(el);
+  });
+});
